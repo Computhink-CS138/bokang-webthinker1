@@ -21,7 +21,8 @@ h2 {
 }
 
 section {
-  color: brown
+  color: brown;
+  text-align: center;
 }
 body {
   color: gold
