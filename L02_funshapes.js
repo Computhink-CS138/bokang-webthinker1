@@ -2,7 +2,7 @@
 Task 1: Add the setup() function
 */
 function setup() {
-  createCanvas(800, 500); 
+  createCanvas(600, 500); 
   background(500, 200, 500);
 }
 function draw() {
