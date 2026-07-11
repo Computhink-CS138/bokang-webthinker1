@@ -5,11 +5,12 @@ function setup() {
   createCanvas(600, 500); 
   background(500, 200, 500);
 }
+
 function draw() {
   // Challenge 1: An eye using ellipse() function
-  ellipse(300, 200, 500, 300); 
-  ellipse(300, 200, 150, 300);
-  ellipse(300, 200, 150, 100);  
+  // ellipse(300, 200, 500, 300); 
+  // ellipse(300, 200, 150, 300);
+  // ellipse(300, 200, 150, 100);  
 
   // Challenge 2: A face using circle() function
 
