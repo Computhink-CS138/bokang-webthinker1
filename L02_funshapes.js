@@ -31,6 +31,7 @@ function draw() {
   triangle(250, 50, 320, 170, 180, 170);
   rect(180, 170, 140, 200);
   circle(250, 250, 70);
+  
 
 
   // Challenge 5: A square face using quad() function
