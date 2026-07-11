@@ -22,8 +22,8 @@ function draw() {
 
   // Challenge 3: A house using rect() function
   rect(100, 200, 500, 300);
-  circle(200, 300, 70);
-  circle(400, 300, 70);
+  circle(250, 300, 70);
+  circle(450, 300, 70);
   // Challenge 4: A rocketship using triangle() function
 
   // Challenge 5: A square face using quad() function
