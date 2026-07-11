@@ -28,7 +28,7 @@ function draw() {
   // circle(380, 420, 20);
 
   // Challenge 4: A rocketship using triangle() function
-  triangle(250, 50, 350, 200, 150, 200)
+  triangle(250, 50, 320, 170, 150, 200)
 
   // Challenge 5: A square face using quad() function
 
