@@ -5,14 +5,14 @@ function setup(){
 
 function draw(){
     fill(255, 0, 0);
-    ellipse(300,200,200,100); //( x, y, width, hieght)
+    ellipse(300,200,100,100); //( x, y, width, hieght)
     // Todo: Challenge 3 Traffic Light
     
     fill(255, 255, 0);
-    ellipse(600,200,200,100);
+    ellipse(600,200,100,100);
 
     fill(255, 0, 0);
-    ellipse(300,200,200,200);
+    ellipse(300,200,100,100);
     
     
 }
