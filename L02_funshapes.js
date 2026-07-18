@@ -46,7 +46,7 @@ strokeWeight(30);
   quad(200, 300, 300, 430, 500, 400, 500, 250);
 //     (X1, y1,   x2,  y2,  x3, y3,   x4,  y4)
 nofill();
-fill("#39aa46");
+  fill("#39aa46");
 circle(240, 200, 40);
 circle(450,200, 40)
 
