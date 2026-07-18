@@ -16,7 +16,7 @@ function draw() {
 let num = 0 
 for (let i = 0; i < 5; i++) {
   console.log(i);
-  fill(num + 200)
+  fill(num + 180)
   circle(50 + i * 50, 100, 40);
 }
 
