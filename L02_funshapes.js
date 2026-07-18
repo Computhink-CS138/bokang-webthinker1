@@ -35,6 +35,7 @@ function draw() {
 
 
   // Challenge 5: A square face using quad() function
+  stro
   fill (66, 179, 245);
   fill("#42b3f5");
   rect(150, 40, 400, 400);
