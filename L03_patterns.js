@@ -13,7 +13,7 @@ function draw() {
 
 
   // Task 1: Colour Gradient
-for (let i = 10; i > -1; i--) {
+for (let i = 0; i < 5; i--) {
   console.log(i);
 }
 
