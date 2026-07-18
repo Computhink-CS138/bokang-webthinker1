@@ -10,9 +10,9 @@ function draw() {
 // circle(225, 200, 100);
 // circle(375, 200, 100);
 // circle(540, 200, 100);
-
+let num = 5
   // Task 1: Colour Gradient
-  
+
 
   // Task 2: Colour Loop
 
