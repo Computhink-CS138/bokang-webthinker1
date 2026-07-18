@@ -11,7 +11,7 @@ function draw() {
 // circle(375, 200, 100);
 // circle(540, 200, 100);
 
-const
+const pi = 
   // Task 1: Colour Gradient
 
 
