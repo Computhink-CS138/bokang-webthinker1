@@ -39,7 +39,7 @@ function draw() {
   circle(250, 200, 70);
   circle(460, 200, 70);
   quad(150, 100, 100, 100, 100, 100, 100, 100);
-
+//     (X1, x2, )
 
   // Challenge 6: Add some colours to the drawings in the above challenges
 
