@@ -6,6 +6,9 @@ function setup() {
   
 function draw() {
   // Recap 1: Repeating Circles
+  function setup() {
+    
+  }
 
   // Task 1: Colour Gradient
 
