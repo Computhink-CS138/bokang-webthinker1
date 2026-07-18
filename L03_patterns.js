@@ -10,7 +10,7 @@ function draw() {
 // circle(225, 200, 100);
 // circle(375, 200, 100);
 // circle(540, 200, 100);
-let num = 5
+let num = 5;
 let a = 10;
   // Task 1: Colour Gradient
 
