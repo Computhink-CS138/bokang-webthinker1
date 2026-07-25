@@ -31,11 +31,6 @@ function draw() {
     } else {
       fill(255)
     }
-
-
-    
-    fill(); 
-    
     circle(50, i + 1 * 50, 100);
     
   }
