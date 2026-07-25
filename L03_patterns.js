@@ -1,8 +1,7 @@
 
 let colourValue; 
 let Colour = 0
-let circleX = 10
-let circleY = 10
+
 function setup() {
     createCanvas(600, 400);
     background(220);
@@ -27,7 +26,7 @@ function draw() {
 
   // Task 2: Colour Loop
   for (let i = 0; i <= 5; i++) {
-    fill();
+    fill(); 
     Colour = Colour + 1 
     circleX = circleX + 1 * 50
     circleY = circleY + 1 * 50
