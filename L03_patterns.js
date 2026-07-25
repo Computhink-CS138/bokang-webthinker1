@@ -42,7 +42,7 @@ function draw() {
   let startx = (width - totalwidth) / 2 + circleDiameter / 2;
 
   for(let i = 0; i < numCircles; i++) {
-    let x = startx
+    let x = startx + i * circleDiameter; 
   }
 
 
