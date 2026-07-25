@@ -36,7 +36,8 @@ function draw() {
   // }
 
   // Task 3: Row of Circles
-  let circle
+  let circleDiameter = 30
+  let Circles = 5;
 
 
   // Task 4: Grid of Circles
