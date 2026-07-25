@@ -1,6 +1,5 @@
 
 let colourValue; 
-let Colour = 0
 
 function setup() {
     createCanvas(600, 400);
@@ -37,7 +36,7 @@ function draw() {
   // }
 
   // Task 3: Row of Circles
-  
+  circle
 
   // Task 4: Grid of Circles
 }
