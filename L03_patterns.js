@@ -28,7 +28,7 @@ function draw() {
   for (let i = 0; i <= 5; i++) {
     fill(); 
     Colour = Colour + 1 
-    circle(50, circleY, 100);
+    circle(50, i + 1 * 50, 100);
     Fill(colourValue);
     colourValue++;
   }
