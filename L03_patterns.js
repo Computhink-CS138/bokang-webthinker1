@@ -29,7 +29,7 @@ function draw() {
   Colour = Colour + 1 
   circleX = circleX + 1 * 50
   circleY = circleY + 1 * 50
-  circle(circleX, 100, 100);
+  circle(circleX, circleY, 100);
   Fill(colourValue);
   colourValue++;
 
