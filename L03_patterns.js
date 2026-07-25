@@ -36,7 +36,7 @@ function draw() {
   // }
 
   // Task 3: Row of Circles
-  circle(wi)
+  circle(width / 2, hieh)
 
   // Task 4: Grid of Circles
 }
