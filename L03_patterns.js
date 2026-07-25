@@ -1,6 +1,6 @@
 
 let colourValue; 
-let 
+let num = 10
 function setup() {
     createCanvas(600, 400);
     background(220);
