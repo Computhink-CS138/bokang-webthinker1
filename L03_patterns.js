@@ -21,7 +21,7 @@ function draw() {
 // }
 
   // Task 2: Colour Loop
-  C
+  circle(100, 100, 100)
 
 
   // Task 3: Row of Circles
