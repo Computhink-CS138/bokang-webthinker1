@@ -38,13 +38,13 @@ function draw() {
   // Task 3: Row of Circles
   let circleDiameter = 30;
   let numCircles = 5;
-  let totalwidth = numCircles * circleDiameter;
-  let startx = (width - totalwidth) / 2 + circleDiameter / 2;
+  let totalWidth = numCircles * circleDiameter;
+  let startx = (width - totalWidth) / 2 + circleDiameter / 2;
 
   for(let i = 0; i < numCircles; i++) {
     let x = startx + i * circleDiameter; 
     ellipse(x, hight / 2, circleDiameter, circleDiameter);
-    
+
   }
 
 
