@@ -33,7 +33,7 @@ function draw() {
       } else {
        fill(255)
       }
-      rect(0 + col * 40, 0, 40, 40);
+      rect(col * 50, 0, 40, 40);
 
     
   }
