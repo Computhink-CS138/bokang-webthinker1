@@ -26,8 +26,9 @@ function draw() {
 
   // Task 2: Colour Loop
   for (let i = 0; i <= 5; i++) {
+    if (i % 2 == 0)
     fill(); 
-    Colour = Colour + 1 
+    
     circle(50, i + 1 * 50, 100);
     Fill(colourValue);
     colourValue++;
