@@ -40,6 +40,7 @@ function draw() {
   let numCircles = 5;
   let totalWidth = numCircles * circleDiameter;
   let startX = (width - totalWidth) / 2 + circleDiameter / 2;
+  let startY = ()
   for (grow = 0; row < 5; row++){
     for(let i = 0; i < numCircles; i++) {
       let x = startX + i * circleDiameter; 
