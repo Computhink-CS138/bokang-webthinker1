@@ -30,8 +30,8 @@ function draw() {
       if (i % 2 == 0){
         fill(0);
       } else {
-      fill(255)
-    }
+       fill(255)
+     }
     rect(0 + i * 40, 0, 40, 40);
     
   }
