@@ -1,6 +1,7 @@
 
 let colourValue; 
 let Colour = 0
+circleX
 function setup() {
     createCanvas(600, 400);
     background(220);
