@@ -24,7 +24,7 @@ function draw() {
 // }
 
   // Task 2: Colour Loop
-  Colour =  
+  Colour = Colour + 1 
   circle(100, 100, 100);
   Fill(colourValue);
   colourValue++;
