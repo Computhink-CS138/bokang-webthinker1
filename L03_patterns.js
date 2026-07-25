@@ -26,13 +26,9 @@ function draw() {
 
   // Task 2: Colour Loop
   for (let row = 0; row < 5; row++) {
-    for (let col = 0; col <= 14; col++) {
-      if (i % 2 == 0){
-        fill(0);
-      } else {
-       fill(255)
-      }
+    for (let col = 0; col < 14; col++) {
       rect(0 + i * 40, 0, 40, 40);
+      
     
   }
   }
