@@ -25,7 +25,7 @@ function draw() {
 // }
 
   // Task 2: Colour Loop
-  for (let i = 0; i <= 10; i++) {
+  for (let row = 0; row < 5; i++) {
     for (let i = 0; i <= 14; i++) {
       if (i % 2 == 0){
         fill(0);
