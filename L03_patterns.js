@@ -25,16 +25,16 @@ function draw() {
 // }
 
   // Task 2: Colour Loop
-  for (row = 0; row < 8; row++) {
-    for (col = 0; col < 14; col++) { 
-      if ((row + col) % 2 == 0){
-        fill(0);
-      } else {
-       fill(255)
-      }
-      rect(col * 50, row * 50, 50, 50);
-   }
-  }
+  // for (row = 0; row < 8; row++) {
+  //   for (col = 0; col < 14; col++) { 
+  //     if ((row + col) % 2 == 0){
+  //       fill(0);
+  //     } else {
+  //      fill(255)
+  //     }
+  //     rect(col * 50, row * 50, 50, 50);
+  //  }
+  // }
 
 
 
