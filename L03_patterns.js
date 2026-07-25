@@ -36,6 +36,7 @@ function draw() {
   // }
 
   // Task 3: Row of Circles
+  let circle
 
 
   // Task 4: Grid of Circles
