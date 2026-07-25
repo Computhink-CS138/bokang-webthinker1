@@ -31,7 +31,7 @@ function draw() {
     } else {
       fill(255)
     }
-    circle(400 + i * 50, 100, 100);
+    circle(50 + i * 50, 100, 40);
     
   }
 
