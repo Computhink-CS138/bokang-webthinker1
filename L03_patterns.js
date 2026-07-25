@@ -28,13 +28,12 @@ function draw() {
   for (let i = 0; i <= 5; i++) {
     if (i % 2 == 0){
 
-      
+
     }
     fill(); 
     
     circle(50, i + 1 * 50, 100);
-    Fill(colourValue);
-    colourValue++;
+    
   }
 
 
