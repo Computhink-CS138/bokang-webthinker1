@@ -26,12 +26,14 @@ function draw() {
 // }
 
   // Task 2: Colour Loop
-  Colour = Colour + 1 
-  circleX = circleX + 1 * 50
-  circleY = circleY + 1 * 50
-  circle(circleX, circleY, 100);
-  Fill(colourValue);
-  colourValue++;
+  for (let i = 0; i <= 5; i++) {
+    Colour = Colour + 1 
+    circleX = circleX + 1 * 50
+    circleY = circleY + 1 * 50
+    circle(circleX, circleY, 100);
+    Fill(colourValue);
+    colourValue++;
+  }
 
 
 
