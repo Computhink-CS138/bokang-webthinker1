@@ -25,7 +25,7 @@ function draw() {
 // }
 
   // Task 2: Colour Loop
-  for (row = 0; row < 5; row++) {
+  for (row = 0; row < 8; row++) {
     for (col = 0; col < 14; col++) { 
       if ((row + col) % 2 == 0){
         fill(0);
