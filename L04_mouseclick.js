@@ -42,7 +42,7 @@ let size = 0
 
 function mouseDragged() {
     for (let i = 0; i < 5; i++) {
-        let size = random(10, 10)
+        let size = random(10, 10);
         let randomMouseX = random(mouseX - 10, mouseX + 10);
         let randomMouseY = random(mouseY - 10, mouseY + 10);
         FileList(random(255), random(255), random(255));
