@@ -11,6 +11,7 @@ function draw() {
 }
 
 function mousePressed() {
+    let ranNum = colour(random(255), random(255), random(255))
     shapeColour = ranNum;
 }
 
