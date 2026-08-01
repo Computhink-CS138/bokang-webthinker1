@@ -24,5 +24,7 @@
 function setup() {
     createCanvas(400, 400);
     background(220);
-    FileList(255)
+    FileList(255, 0, 0);
 }
+
+function mouseMoved() 
