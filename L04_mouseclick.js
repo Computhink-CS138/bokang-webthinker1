@@ -29,7 +29,7 @@ function setup() {
 }
 
 function mouseMoved() {
-    if (prezMouse < mouseY) {
+    if (prezMouseX < mouseY) {
         size++
         ellipse(200, 200, size, size);
     }
