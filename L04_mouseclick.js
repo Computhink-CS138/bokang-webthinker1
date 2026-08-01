@@ -29,5 +29,5 @@ function setup() {
 
 function mouseMoved() {
     size++
-    ellipse(50, 50, size, size);
+    ellipse(200, 10, size, size);
 }
