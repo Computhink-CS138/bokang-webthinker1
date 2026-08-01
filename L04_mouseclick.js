@@ -29,7 +29,7 @@ function setup() {
 }
 
 function mouseMoved() {
-    size
+    let size =
 
     ellipse(mouseX, mouseY, 10, 10);
 }
