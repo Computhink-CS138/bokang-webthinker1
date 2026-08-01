@@ -1,5 +1,5 @@
 let shapeColour = 'blue';
-
+let randomNum = 
 function setup() {
     createCanvas(400, 400);
     background(220);
