@@ -26,7 +26,7 @@ function setup() {
     createCanvas(400, 400);
     background(220);
 }
-if (pr)
+if (prezMouse < mous)
 function mouseMoved() {
     size++
     ellipse(200, 200, size, size);
