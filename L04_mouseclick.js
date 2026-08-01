@@ -11,5 +11,6 @@ function draw() {
 }
 
 function mousePressed() {
-    shapeColour = 'red'
+    shapeColour = 'red';
 }
+
