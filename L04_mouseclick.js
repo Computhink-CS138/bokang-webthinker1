@@ -41,6 +41,6 @@
 // }
 
 function mouseDragged() {
-    
+    ellipse()
 
 }
