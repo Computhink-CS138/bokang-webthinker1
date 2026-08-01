@@ -21,12 +21,13 @@
 //     fill(ranNum);
 //     ellipse(200, 200, 80, 80);
 // }
+let mo
 let size = 0
 function setup() {
     createCanvas(400, 400);
     background(220);
 }
-if (prezMouse < mous)
+if (prezMouse < mouseY)
 function mouseMoved() {
     size++
     ellipse(200, 200, size, size);
