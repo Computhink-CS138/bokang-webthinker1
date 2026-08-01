@@ -36,7 +36,8 @@ function mouseMoved() {
         size--
     }
     
-}
-prevMouseX = mouseX
 
+prevMouseX = mouseX
+background('white')
 ellipse(200, 200, size, size);
+}
