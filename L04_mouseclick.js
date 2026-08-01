@@ -38,4 +38,5 @@ function mouseMoved() {
     
 }
 prevMouseX = mouseX
+
 ellipse(200, 200, size, size);
