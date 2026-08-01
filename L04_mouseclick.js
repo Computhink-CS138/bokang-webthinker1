@@ -10,17 +10,17 @@
     
 // }
 
-function mousePressed() {
-    let ranNum = color(random(255), random(255), random(255));
-    fill(ranNum);
-    ellipse(200, 200, 80, 80);
-}
+// function mousePressed() {
+//     let ranNum = color(random(255), random(255), random(255));
+//     fill(ranNum);
+//     ellipse(200, 200, 80, 80);
+// }
 
-function mouseReleased() {
-    let ranNum = color(255, 255, 255);
-    fill(ranNum);
-    ellipse(200, 200, 80, 80);
-}
+// function mouseReleased() {
+//     let ranNum = color(255, 255, 255);
+//     fill(ranNum);
+//     ellipse(200, 200, 80, 80);
+//}
 let prevMouseX = 50
 let size = 0
 function setup() {
