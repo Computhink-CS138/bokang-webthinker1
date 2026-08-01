@@ -41,7 +41,9 @@ let size = 0
 // }
 
 function mouseDragged() {
-    for (let i = 0; i < 5; i)
-    ellipse()
+    for (let i = 0; i < 5; i++) {
+
+    }
+
 
 }
