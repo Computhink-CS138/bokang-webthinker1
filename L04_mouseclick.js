@@ -41,9 +41,7 @@ let size = 0
 // }
 
 function mouseDragged() {
-    for (i = 0, 1 < 10, i++) {
-        
-    }
+    
     ellipse()
 
 }
