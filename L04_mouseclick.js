@@ -11,13 +11,13 @@ function draw() {
 }
 
 function mousePressed() {
-    let ranNum = color(random(255), random(255), random(255))
+    let ranNum = color(random(255), random(255), random(255));
     fill(ranNum);
     ellipse(200, 200, 80, 80);
 }
 
 function mouseReleased() {
-    let ranNum = color(255, 255, 255)
+    let ranNum = color(255, 255, 255);
     fill(ranNum);
     ellipse(200, 200, 80, 80);
 }
