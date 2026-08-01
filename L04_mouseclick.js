@@ -32,12 +32,10 @@ function mouseMoved() {
     if (prevMouseX < mouseX) {
         size++
         
-        ellipse(200, 200, size, size);
+        
     }
     else {
         size--
-        ellipse(200, 200, size, size);
-
     }
     
 }
