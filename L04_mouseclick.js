@@ -42,3 +42,6 @@
 // ellipse(200, 200, size, size);
 // }
 
+function setup() {
+    createCanvas
+}
