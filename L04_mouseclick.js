@@ -34,7 +34,9 @@ function mouseMoved() {
         ellipse(200, 200, size, size);
     }
     else {
-        
+        size
+        ellipse(200, 200, size, size);
+
     }
     
 }
