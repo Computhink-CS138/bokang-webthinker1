@@ -31,11 +31,10 @@ function setup() {
 function mouseMoved() {
     if (prevMouseX < mouseX) {
         size++
-        
-        
     }
     else {
         size--
     }
     
 }
+ellipse(200, 200, size, size);
