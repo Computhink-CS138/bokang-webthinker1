@@ -22,5 +22,6 @@
 //     ellipse(200, 200, 80, 80);
 // }
 function setup() {
-    create
+    createCanvas(400, 400);
+    
 }
