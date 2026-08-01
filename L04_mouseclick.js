@@ -21,6 +21,7 @@
 //     fill(ranNum);
 //     ellipse(200, 200, 80, 80);
 // }
+let 
 function setup() {
     createCanvas(400, 400);
     background(220);
@@ -28,5 +29,6 @@ function setup() {
 }
 
 function mouseMoved() {
+
     ellipse(mouseX, mouseY, 10, 10);
 }
