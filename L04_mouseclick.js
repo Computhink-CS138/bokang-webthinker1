@@ -21,7 +21,7 @@
 //     fill(ranNum);
 //     ellipse(200, 200, 80, 80);
 // }
-let mo
+let prevMouseX = mouseX
 let size = 0
 function setup() {
     createCanvas(400, 400);
