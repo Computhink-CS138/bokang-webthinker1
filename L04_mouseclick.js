@@ -27,4 +27,6 @@ function setup() {
     FileList(255, 0, 0);
 }
 
-function mouseMoved() 
+function mouseMoved() {
+    ellipse()
+}
