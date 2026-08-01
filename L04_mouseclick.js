@@ -25,7 +25,7 @@ let size = 0
 function setup() {
     createCanvas(400, 400);
     background(220);
-    fill(random(225), random(225), random(225));
+    
 }
 
 function mouseMoved() {
