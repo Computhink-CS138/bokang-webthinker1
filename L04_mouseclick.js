@@ -25,11 +25,10 @@ let size = 0
 function setup() {
     createCanvas(400, 400);
     background(220);
-    
+
 }
 
 function mouseMoved() {
     size++
-
     ellipse(size, size, 10, 10);
 }
