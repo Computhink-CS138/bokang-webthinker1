@@ -43,7 +43,7 @@ let size = 0
 function mouseDragged() {
     for (let i = 0; i < 5; i++) {
         let size = random(10, 10)
-        let random
+        let randomMouseX = random()
 
     }
 
