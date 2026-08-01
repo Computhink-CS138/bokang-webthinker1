@@ -1,6 +1,6 @@
 let shapeColour = 'blue';
 let ranNum = colour(random(255), random(255), random(255))
-fill 
+fill(ran)
 function setup() {
     createCanvas(400, 400);
     background(220);
