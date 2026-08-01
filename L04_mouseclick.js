@@ -21,25 +21,26 @@
 //     fill(ranNum);
 //     ellipse(200, 200, 80, 80);
 //}
-let prevMouseX = 50
-let size = 0
-function setup() {
-    createCanvas(400, 400);
-    background(220);
-}
+// let prevMouseX = 50
+// let size = 0
+// function setup() {
+//     createCanvas(400, 400);
+//     background(220);
+// }
 
-function mouseMoved() {
-    if (prevMouseX < mouseX) {
-        size++
-    }
-    else {
-        size--
-    }
-prevMouseX = mouseX
-background('white')
-ellipse(200, 200, size, size);
-}
+// function mouseMoved() {
+//     if (prevMouseX < mouseX) {
+//         size++
+//     }
+//     else {
+//         size--
+//     }
+// prevMouseX = mouseX
+// background('white')
+// ellipse(200, 200, size, size);
+// }
 
 function mouseDragged() {
     
+
 }
