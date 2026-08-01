@@ -17,5 +17,7 @@ function mousePressed() {
 }
 
 function mouseReleased() {
-    shapeColour = ranNum;
+    let ranNum = colour(random(255), random(255), random(255))
+    fill(ranNum);
+    ellipse(200, 200, 80, 80);
 }
