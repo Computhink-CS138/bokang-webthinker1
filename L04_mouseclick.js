@@ -45,7 +45,7 @@ function mouseDragged() {
         let size = random(10, 10);
         let randomMouseX = random(mouseX - 10, mouseX + 10);
         let randomMouseY = random(mouseY - 10, mouseY + 10);
-        FileList(random(255), random(255), random(255));
+        fill(random(255), random(255), random(255));
         elipse(randomMouseX, randomMouseY, size);
 
 
