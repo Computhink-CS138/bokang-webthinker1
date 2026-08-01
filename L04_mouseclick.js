@@ -35,8 +35,6 @@ function mouseMoved() {
     else {
         size--
     }
-    
-
 prevMouseX = mouseX
 background('white')
 ellipse(200, 200, size, size);
