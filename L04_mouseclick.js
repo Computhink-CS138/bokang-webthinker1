@@ -13,7 +13,7 @@ function draw() {
 function mousePressed() {
     let ranNum = colour(random(255), random(255), random(255))
     fill(ranNum);
-    ellipse(2)
+    ellipse(200, 200, 80, 80);
 }
 
 function mouseReleased() {
