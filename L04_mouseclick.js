@@ -12,7 +12,7 @@ function draw() {
 }
 
 function mousePressed() {
-    shapeColour = random(0, 255, 255);
+    shapeColour = ranNum;
 }
 
 function mouseReleased() {
