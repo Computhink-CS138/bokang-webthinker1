@@ -42,11 +42,3 @@
 // ellipse(200, 200, size, size);
 // }
 
-function setup() {
-    createCanvas(400, 400);
-    background(220);
-}
-
-function mouseDragged() {
-    ellipse()
-}
