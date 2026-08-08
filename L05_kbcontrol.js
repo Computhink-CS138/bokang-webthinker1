@@ -1,4 +1,3 @@
-
 function setup() {
     createCanvas(400, 400);
     background(220);
@@ -10,6 +9,9 @@ function setup() {
 
 function keyPressed() {
     for (i = 0; 1 < numCircle, i++;) {
+        let colour = random(0, 255);
+let rectSize = random(10, 50);
+let numCircle = random(1, 20);
         circle(i, i, rectSize);
         fill(colour, colour, colour);
     }
