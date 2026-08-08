@@ -19,7 +19,5 @@ function keyPressed() {
 }
 
 function keyReleased() {
-    rectSize = 0;
-    let rectSize = 0;
-    let numCircle = 0;
+    
 }
