@@ -32,8 +32,8 @@ function keyPressed() {
 }
 
     if (key = s) {
-        circle(200, 200, 50);
+        square(200, 200, 50);
 }
     if (key = c) {
-        circle(200, 200, 50);
+        t(200, 200, 50);
 }
