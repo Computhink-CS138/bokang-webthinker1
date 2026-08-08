@@ -8,7 +8,7 @@ function setup() {
 // }
 let numCircle = random(1, 20);
 function keyPressed() {
-    for (i = 0; 1 < numCircle, i++;) {
+    for (i = 0; i < numCircle, i++;) {
         let colour = random(0, 255);
         let rectSize = random(10, 50);
         circle(i, i, rectSize);
