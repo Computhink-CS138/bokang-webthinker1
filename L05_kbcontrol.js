@@ -1,4 +1,5 @@
-let rectSize = 50;
+random
+let rectSize = random;
 
 function setup() {
     createCanvas(400, 400);
