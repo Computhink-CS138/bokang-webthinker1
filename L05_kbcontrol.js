@@ -6,8 +6,9 @@ function setup() {
 // function draw() {
 //     background(220);
 // }
-let numCircle = random(1, 20);
+
 function keyPressed() {
+    let numCircle = random(1, 20);
     for (i = 0; i < numCircle, i++;) {
         let colour = random(0, 255);
         let rectSize = random(10, 50);
