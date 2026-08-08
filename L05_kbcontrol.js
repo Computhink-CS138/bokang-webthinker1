@@ -12,7 +12,10 @@ function draw() {
 }
 
 function keyPressed() {
-    rectSize = random();
+    for (i = 0; 1 < numCircle, i++;) {
+        circle(i, i, rectSize);
+        fill(colour);
+    }
 }
 
 function keyReleased() {
