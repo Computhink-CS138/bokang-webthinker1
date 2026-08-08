@@ -30,7 +30,7 @@ function keyPressed() {
     if (key = 'c')
         circle(200, 200, 50);
     elseif (key = 's')
-    
+        square(200, 200, 50);
 }
 
     if (key = 's') {
