@@ -13,8 +13,9 @@ function keyPressed() {
         let colour = random(0, 255);
         let rectSize = random(10, 50);
         let random1 = random(0, 400);
+        
         fill(colour, colour, colour);
-        circle(, rectSize);
+        circle(random1, rectSize);
         
     }
 }
