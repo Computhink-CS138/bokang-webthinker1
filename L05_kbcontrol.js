@@ -15,7 +15,7 @@ function keyPressed() {
         let random1 = random(0, 400);
         let random2 = random(0, 400);
         fill(colour, colour, colour);
-        circle(random1, random2, rectSize);
+        ellipse(random1, random2, rectSize, rectSize);
         
     }
 }
