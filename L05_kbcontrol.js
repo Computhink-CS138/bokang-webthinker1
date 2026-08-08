@@ -4,7 +4,7 @@ let rectSize = random(10, 50);
 let numCircle = random(1, 20);
 function setup() {
     createCanvas(400, 400);
-    background()
+    background(220);
 }
 
 // function draw() {
