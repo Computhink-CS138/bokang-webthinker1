@@ -26,4 +26,7 @@ function setup() {
 //     background(220); 
 // }
 
-F
+function keyPressed() {
+    if (key = c)
+        
+}
