@@ -9,9 +9,8 @@ function setup() {
 function draw() {
     background(220);
     for (i = 0; 1 < numCircle, i++;) {
-        circle(i, i, rectSize)
-
-
+        circle(i, i, rectSize);
+        FileLis
     }
 }
 
