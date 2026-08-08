@@ -8,8 +8,9 @@ function setup() {
 
 function draw() {
     background(220);
-    for (i = 0; 1 < numCircle, i++); {
+    for (i = 0; 1 < numCircle, i++;) {
         
+
 
     }
 }
