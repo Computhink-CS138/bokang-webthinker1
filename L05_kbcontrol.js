@@ -8,7 +8,10 @@ function setup() {
 
 function draw() {
     background(220);
-    circle(random)
+    for (i = 0; 1 < numCircle, i++); {
+        
+
+    }
 }
 
 function keyPressed() {
