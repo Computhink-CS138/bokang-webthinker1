@@ -27,7 +27,7 @@ function setup() {
 // }
 
 function keyPressed() {
-    if (key = )
+    if (key = 'c')
         circle(200, 200, 50);
 }
 
