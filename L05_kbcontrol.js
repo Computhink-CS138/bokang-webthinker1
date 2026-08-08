@@ -19,5 +19,5 @@ function keyPressed() {
 }
 
 function keyReleased() {
-    
+    createImageBitmap()
 }
