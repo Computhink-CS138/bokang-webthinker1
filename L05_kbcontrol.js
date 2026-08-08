@@ -16,7 +16,7 @@ function keyPressed() {
         let rectSize = random(10, 50);
         let random1 = random(0, 400);
         let random2 = random(0, 400);
-        fill(colour, colour, colour);
+        fill(colour1, colour2, colour3);
         ellipse(random1, random2, rectSize, rectSize);
         
     }
