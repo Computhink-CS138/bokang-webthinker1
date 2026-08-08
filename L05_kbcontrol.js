@@ -27,10 +27,10 @@ function setup() {
 // }
 
 function keyPressed() {
-    if (key = c)
+    if (key = )
         circle(200, 200, 50);
 }
 
-    if (key = s) {
+    if (key = 's') {
         square(200, 200, 50);
 }
