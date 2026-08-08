@@ -20,6 +20,6 @@ function keyPressed() {
 
 function keyReleased() {
     rectSize = 0;
-    let rectSize = random(10, 50);
-    let numCircle = random(1, 20);
+    let rectSize = 0;
+    let numCircle = 0;
 }
