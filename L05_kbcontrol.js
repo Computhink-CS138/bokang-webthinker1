@@ -6,9 +6,7 @@ function setup() {
 // function draw() {
 //     background(220);
 // }
-
-
-
+let numCircle = random(1, 20);
 function keyPressed() {
     for (i = 0; 1 < numCircle, i++;) {
         let colour = random(0, 255);
