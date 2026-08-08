@@ -1,6 +1,6 @@
 function setup() {
     createCanvas(400, 400);
-    background(220);
+    // background(220);
 }
 
 // function draw() {
@@ -18,7 +18,7 @@ function keyPressed() {
     //     ellipse(random1, random2, rectSize, rectSize);
         
     // }
-    background(3)
+    background(200)
 }
 
 function keyReleased() {
