@@ -28,5 +28,6 @@ function setup() {
 
 function keyPressed() {
     if (key = c)
-        circle()
+        circle(200, 200, 50);
 }
+
