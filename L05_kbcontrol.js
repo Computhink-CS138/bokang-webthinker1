@@ -1,6 +1,6 @@
 random
 let rectSize = random();
-
+let numCircle = random()
 function setup() {
     createCanvas(400, 400);
 }
