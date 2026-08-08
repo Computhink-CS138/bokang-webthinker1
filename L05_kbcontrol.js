@@ -1,4 +1,5 @@
 random
+let colour = random(0)
 let rectSize = random();
 let numCircle = random(1, 20);
 function setup() {
