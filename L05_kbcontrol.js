@@ -31,7 +31,7 @@ function keyPressed() {
     console.log("keycode:", keyCode);
     if (key == 'c') {
         circle(200, 200, 50);
-    elif (keyCode == '32')
+    elif (keyCode == 32)
         square(200, 200, 50);
     
     
