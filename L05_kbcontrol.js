@@ -1,1 +1,1 @@
-let rect
+let rectSize = 50;
