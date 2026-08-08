@@ -28,7 +28,7 @@ function setup() {
 
 function keyPressed() {
     console.log("key:", key);
-    console
+    console.log("keycode:", )
     if (key == 'c') {
         circle(200, 200, 50);
     elif (keycode == '32')
