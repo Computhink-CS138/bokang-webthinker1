@@ -35,5 +35,5 @@ function keyPressed() {
         square(200, 200, 50);
 }
     if (key = t) {
-        triangle(200, 200, 5);
+        triangle(2);
 }
