@@ -31,7 +31,7 @@ function keyPressed() {
         circle(200, 200, 50);
 }
 
-    if (key = c) {
+    if (key = s) {
         circle(200, 200, 50);
 }
     if (key = c) {
