@@ -19,5 +19,5 @@ function keyPressed() {
 }
 
 function keyReleased() {
-    createCanvas(400, 400);
+    fill 
 }
