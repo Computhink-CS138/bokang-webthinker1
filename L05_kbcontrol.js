@@ -29,7 +29,7 @@ function setup() {
 function keyPressed() {
     if (key == 'c')
         circle(200, 200, 50);
-    else if  (key == 's')
+    else if (key == 's')
         square(200, 200, 50);
 }
 
