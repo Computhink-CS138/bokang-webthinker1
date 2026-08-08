@@ -1,5 +1,5 @@
 random
-let rectSize = random;
+let rectSize = random();
 
 function setup() {
     createCanvas(400, 400);
@@ -10,7 +10,7 @@ function draw() {
 }
 
 function keyPressed() {
-    rectSize = 100;
+    rectSize = random();
 }
 
 function keyReleased() {
