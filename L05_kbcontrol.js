@@ -31,3 +31,9 @@ function keyPressed() {
         circle(200, 200, 50);
 }
 
+    if (key = c) {
+        circle(200, 200, 50);
+}
+    if (key = c) {
+        circle(200, 200, 50);
+}
