@@ -12,12 +12,11 @@ function mouseMoved() {
     if (mouseX < 74) {
         size++
     }
-    else if (75<mouseX < 125){
+    else if (75 < mouseX < 125){
         size--
     }
 prevMouseX = mouseX
-background('white')
-ellipse(200, 200, size, size);
+
 }
 
 // function keyPressed() {
