@@ -12,7 +12,7 @@ function mouseMoved() {
     if (mouseX < 74) {
         size++
     }
-    else if (mouseX ){
+    else if (75<mouseX < 125){
         size--
     }
 prevMouseX = mouseX
