@@ -7,7 +7,7 @@ function draw() {
     background(220);
     if (keyIsDown(UP_ARROW)) {
         x += 10;
-        direction = ""
+        direction = "up";
     }
 
     if (keyIsDown(LEFT_ARROW)) {
