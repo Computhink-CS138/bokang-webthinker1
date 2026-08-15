@@ -16,7 +16,7 @@ function mouseMoved() {
         fill("")
     }
     else {
-        fill("white")
+        fill("blue")
     }
 
 
