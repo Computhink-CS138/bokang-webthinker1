@@ -9,6 +9,7 @@ function draw() {
         x += 10;
     }
     circle(width / 2 + x, height / 2, 100);
+    tiangle()
 
     if (keyIsDown(LEFT_ARROW)) {
         x -= 10;
