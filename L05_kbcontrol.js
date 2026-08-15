@@ -9,7 +9,7 @@ function draw() {
     circle(100, 100, 50);
 }
 function mouseMoved() {
-    if (prevMouseX < mouseX) {
+    if (mouseX < 74) {
         size++
     }
     else {
