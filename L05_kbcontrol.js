@@ -6,12 +6,12 @@ let x = 0
 function draw() {
     background(220);
     if (keyIsDown(UP_ARROW)) {
-        x += 10;
+        y += 10;
         direction = "up";
     }
 
     if (keyIsDown(DOWN_ARROW)) {
-        x -= 10;
+        y -= 10;
         direction = "down";
     }
     if (direction == "up") {
