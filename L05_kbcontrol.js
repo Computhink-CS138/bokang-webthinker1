@@ -10,8 +10,9 @@ function draw() {
 }
 
 function keyPressed() {
-    if (key == "w");
-    
+    if (key == "w") {
+        
+    }
 }
 // function draw() {
 //     background(220);
