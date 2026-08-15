@@ -8,7 +8,7 @@ function draw() {
     if (keyIsDown(RIGHT_ARROW)) {
         x += 10;
     }
-    tiangle(x, )
+    tiangle(x, x + 30, )
 
     if (keyIsDown(LEFT_ARROW)) {
         x -= 10;
