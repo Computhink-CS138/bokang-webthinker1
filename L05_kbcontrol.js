@@ -14,7 +14,9 @@ function draw() {
         x -= 10;
         direction = "down";
     }
-    
+    if (direction == "up") {
+        
+    }
 }
 
 
