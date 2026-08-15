@@ -15,7 +15,10 @@ function draw() {
     }
     circle(width / 2 + x, height / 2, 100);
     if (x < 25) {
-        
+        x = 25
+    }
+    if (x > width - 25) {
+        x - width
     }
 }
 
