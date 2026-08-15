@@ -9,17 +9,19 @@ function draw() {
     circle(100, 100, 50);
 }
 
-function keyPressed() {
-    if (key == "w") {
-        fill(255, 255, 255);
-    }else if (key == "r"){
-        fill("red");
-    }else if (key == "g") {
-        fill("green")
-    }else {
-        fill("yellow");
-    }
-}
+
+
+// function keyPressed() {
+//     if (key == "w") {
+//         fill(255, 255, 255);
+//     }else if (key == "r"){
+//         fill("red");
+//     }else if (key == "g") {
+//         fill("green")
+//     }else {
+//         fill("yellow");
+//     }
+// }
 
 
 // function 
