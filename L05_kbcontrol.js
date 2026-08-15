@@ -18,8 +18,6 @@ function mouseMoved() {
     else if (mouseX >= 126) {
         fill("blue")
     }
-
-
 }
 
 // function keyPressed() {
