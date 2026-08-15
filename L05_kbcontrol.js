@@ -12,7 +12,7 @@ function draw() {
     }
 
     if (keyIsDown(DOWN_ARROW)) {
-        y -= 10;
+        y += 2;
         direction = "down";
     }
     if (direction == "up") {
