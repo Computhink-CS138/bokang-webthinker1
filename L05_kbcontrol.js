@@ -10,8 +10,9 @@ function draw() {
         direction = "up";
     }
 
-    if (keyIsDown(LEFT_ARROW)) {
+    if (keyIsDown(DOWN_ARROW)) {
         x -= 10;
+        direction = ""
     }
     circle(x, 100, 50);
     if (x < 25) {
