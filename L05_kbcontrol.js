@@ -8,7 +8,7 @@ function draw() {
     if (keyIsDown(RIGHT_ARROW)) {
         x += 1
     }
-    circle(width / 2, height / 2, 100);
+    circle(width / 2 + x, height / 2, 100);
 }
 
 
