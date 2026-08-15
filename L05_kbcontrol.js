@@ -13,7 +13,7 @@ function draw() {
 
 function keyPressed() {
     if (key == "w") {
-        fill()
+        fill(255, 255, 255)
     }
 }
 // function draw() {
