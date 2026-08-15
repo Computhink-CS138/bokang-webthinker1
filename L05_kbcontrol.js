@@ -15,7 +15,7 @@ function draw() {
         direction = "down";
     }
     if (direction == "up") {
-        
+        triangle(75, x )
     }
 }
 
