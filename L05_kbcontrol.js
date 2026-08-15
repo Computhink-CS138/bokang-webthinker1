@@ -3,11 +3,11 @@ function setup() {
     background(220);
 }
 let x = 0
-let y = 0
+let y = 100
 function draw() {
     background(220);
     if (keyIsDown(UP_ARROW)) {
-        y += 10;
+        y -= 2;
         direction = "up";
     }
 
