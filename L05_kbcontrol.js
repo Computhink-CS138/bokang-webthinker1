@@ -7,7 +7,6 @@ function draw() {
     background(220);
     if (keyIsDown(RIGHT_ARROW)) {
         x += 10;
-        tiangle(x, x + 30, x + 10, x + 20, x + 40, x + 50);
     }
 
     if (keyIsDown(LEFT_ARROW)) {
