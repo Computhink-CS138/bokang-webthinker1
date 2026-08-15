@@ -3,6 +3,7 @@ function setup() {
     background(220);
 }
 let x = 0
+let y = 0
 function draw() {
     background(220);
     if (keyIsDown(UP_ARROW)) {
@@ -15,7 +16,7 @@ function draw() {
         direction = "down";
     }
     if (direction == "up") {
-        triangle(75, x )
+        triangle(75, y +25, )
     }
 }
 
