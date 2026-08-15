@@ -13,11 +13,6 @@ function draw() {
     if (keyIsDown(LEFT_ARROW)) {
         x -= 10;
     }
-    circle(x, 2, 100);
-    // if (x < 25) {
-    //     x = 25;
-    // }
-    // if (x > width - 25) {
     //     x = width - 25;
     // }
 }
