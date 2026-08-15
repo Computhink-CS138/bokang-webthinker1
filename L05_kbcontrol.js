@@ -10,10 +10,10 @@ function draw() {
 }
 function mouseMoved() {
     if (mouseX < 74) {
-        size++
+        fill("red")
     }
     else if (75 < mouseX < 125){
-        fill("")
+        fill("green")
     }
     else {
         fill("blue")
