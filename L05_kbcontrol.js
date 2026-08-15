@@ -15,7 +15,10 @@ function mouseMoved() {
     else if (75 < mouseX < 125){
         size--
     }
-prevMouseX = mouseX
+    else {
+        
+    }
+
 
 }
 
