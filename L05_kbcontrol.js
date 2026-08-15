@@ -10,6 +10,7 @@ function draw() {
 }
 
 function keyPressed() {
+    if (key == "w");
     
 }
 // function draw() {
