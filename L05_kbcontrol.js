@@ -8,8 +8,7 @@ function draw() {
 
     circle(100, 100, 50);
 }
-
-
+function mouseMoved() 
 
 // function keyPressed() {
 //     if (key == "w") {
