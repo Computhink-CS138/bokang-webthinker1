@@ -13,10 +13,10 @@ function mouseMoved() {
         size++
     }
     else if (75 < mouseX < 125){
-        size--
+        fill("white")
     }
     else {
-        fill()
+        fill("white")
     }
 
 
