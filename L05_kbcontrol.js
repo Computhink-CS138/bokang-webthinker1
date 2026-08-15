@@ -16,7 +16,7 @@ function mouseMoved() {
         size--
     }
     else {
-        
+        fill()
     }
 
 
