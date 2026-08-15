@@ -19,7 +19,7 @@ function keyPressed() {
     }else if (key == "g") {
         fill("green")
     }else {
-        fill("yellow")
+        fill("yellow");
     }
 }
 
