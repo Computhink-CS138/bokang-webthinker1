@@ -5,8 +5,10 @@ function setup() {
 
 function draw() {
     background(220);
-
-    circle(100, 100, 50);
+    if (keyIsDown(RIGHT_ARROW)) {
+        x += 1
+    }
+    circle(width / 2, hieh)
 }
 
 
