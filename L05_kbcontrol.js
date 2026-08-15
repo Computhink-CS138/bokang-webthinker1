@@ -12,7 +12,7 @@ function mouseMoved() {
     if (mouseX < 74) {
         fill("red")
     }
-    else if (mouseX >= ){
+    else if (mouseX >= 75 && mouseX ){
         fill("green")
     }
     else if (mouseX >= 126) {
