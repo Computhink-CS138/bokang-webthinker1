@@ -11,7 +11,7 @@ function draw() {
     circle(width / 2 + x, height / 2, 100);
 
     if (keyIsDown(LEFT_ARROW)) {
-    x -= 1
+        x -= 1;
     }
     circle(width / 2 + x, height / 2, 100);
 }
