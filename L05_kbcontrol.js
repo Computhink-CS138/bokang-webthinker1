@@ -9,7 +9,15 @@ function draw() {
     circle(100, 100, 50);
 }
 function mouseMoved() {
-    
+        if (prevMouseX < mouseX) {
+        size++
+    }
+    else {
+        size--
+    }
+prevMouseX = mouseX
+background('white')
+ellipse(200, 200, size, size);
 }
 
 // function keyPressed() {
