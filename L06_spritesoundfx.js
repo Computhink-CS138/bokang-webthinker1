@@ -57,3 +57,4 @@ function preload() {
     staticImage = loadSound('assets/pop.mp3');
 }
 
+function setup()
