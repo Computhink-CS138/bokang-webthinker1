@@ -58,5 +58,5 @@ function preload() {
 }
 
 function setup() {
-    createC
+    createCanvas(200, 200)
 }
