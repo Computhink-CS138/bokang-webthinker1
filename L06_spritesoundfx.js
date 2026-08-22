@@ -29,8 +29,8 @@ function draw() {
         direction = "right";
     }
 
-    y = constrain(y, 50, 350, - 50);
-    x = constrain(x, 50, 350, - 50);
+    y = constrain(y, 50, 350 - 50);
+    x = constrain(x, 50, 350 - 50);
 
     if (keyIsDown(32)) {
         fill(200)
