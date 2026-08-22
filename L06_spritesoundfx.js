@@ -1,6 +1,6 @@
-let x = 100
-let y = 100
-let direction = "up"
+// let x = 100
+// let y = 100
+// let direction = "up"
 
 // function setup() {
 //     createCanvas(400, 400);
@@ -50,6 +50,8 @@ let direction = "up"
 // }
 
 let soundEffect, bigMusic, staticImage;
+let x = 100;
+let y = 100;
 
 function preload() {
     soundEffect = loadSound('assets/pop.mp3');
