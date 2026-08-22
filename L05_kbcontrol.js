@@ -3,7 +3,7 @@ function setup() {
     background(220);
 }
 let x = 0
-let y = 
+let y = constrain()
 let direction = "up"
 
 function draw() {
