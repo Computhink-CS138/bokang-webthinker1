@@ -85,18 +85,16 @@ function draw() {
     }
     background("lightblue");
     image(staticImage, 0, 0, 110, 133);
+    if (direction == "up") {
+       image(staticImage, x, y, 110, 133);
+    } else if (direction == "down") {
+       image(staticImage, x, y, 110, 133);
+    } else if (direction == "left") {
+       image(staticImage, x, y, 110, 133);
+    } else if (direction == "right") {
+       image(staticImage, x, y, 110, 133);
+    }
 }
-
-//     if (direction == "up") {
-//        image(staticImage, x, y, 110, 133);
-//     } else if (direction == "down") {
-//        image(staticImage, x, y, 110, 133);
-//     } else if (direction == "left") {
-//        image(staticImage, x, y, 110, 133);
-//     } else if (direction == "right") {
-//        image(staticImage, x, y, 110, 133);
-//     }
-// }
 
 function keyPressed() {
     if (keycode === 32) {
