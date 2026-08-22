@@ -90,6 +90,7 @@ function draw() {
         background("red");
 
         if (soundEffect.isPlaying()) {
+            soundEffect.play();
 
         }
     } 
