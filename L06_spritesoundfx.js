@@ -87,8 +87,8 @@ function draw() {
     x = constrain(x, 50, height - 100);
 
     if (x === width - 100 || x === 0 || y === height - 100 || y === 0) {
-    background("red");
-    popSound.play();
+        background("red");
+        popSound.play();
     } 
 
 
