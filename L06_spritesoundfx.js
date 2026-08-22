@@ -83,7 +83,7 @@ function draw() {
     }
 
     if (x === 400 || x === 0) {
-        
+        background("red")
     }
 
     y = constrain(y, 50, width - 100);
