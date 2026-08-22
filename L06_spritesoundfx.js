@@ -70,7 +70,7 @@ function draw() {
 }
 
 //     if (direction == "up") {
-//         image(staticImage, 0, 0, 110, 133);
+//        image(staticImage, 0, 0, 110, 133);
 //     } else if (direction == "down") {
 //         rect(x, y, 50, 50);
 //     } else if (direction == "left") {
