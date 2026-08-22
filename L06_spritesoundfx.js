@@ -52,5 +52,6 @@
 let soundEffect, bigMusic, staticImage;
 
 function preload() {
-    soundEffect = loadSound('assets/pop')
+    soundEffect = loadSound('assets/pop.mp3');
+    
 }
