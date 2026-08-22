@@ -83,9 +83,8 @@ function draw() {
     }
 
     if (x === 400 || x === 0 || y === 400 || y === 0) {
-        background("red")
-        popSound.play()
-
+        background("red");
+        popSound.play();
     } 
 
 
