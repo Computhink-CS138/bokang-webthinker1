@@ -24,12 +24,13 @@ function draw() {
         direction = "left";
     }
 
-    if (keyIsDown(DOWN_ARROW)) {
+    if (keyIsDown(RIGHT_ARROW)) {
         x += 2;
-        direction = "down";
+        direction = "right";
     }
 
     y = constrain(y, 0, height);
+    x = con
 
     if (direction == "up") {
         triangle(75, y + 25, 100, y - 25, 125, y + 25);
