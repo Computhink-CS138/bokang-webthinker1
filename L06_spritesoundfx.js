@@ -69,6 +69,17 @@ function draw() {
     image(staticImage, 0, 0, 110, 133);
 }
 
+//     if (direction == "up") {
+//         rect(x, y, 50, 50);
+//     } else if (direction == "down") {
+//         rect(x, y, 50, 50);
+//     } else if (direction == "left") {
+//         rect(x, y, 50, 50);
+//     } else if (direction == "right") {
+//         rect(x, y, 50, 50);
+//     }
+// }
+
 function keyPressed() {
     if (keycode === 32) {
         soundEffect.play();
