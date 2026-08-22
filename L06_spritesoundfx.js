@@ -35,8 +35,8 @@ function draw() {
     if (direction == "up") {
         triangle(75, y + 25, 100, y - 25, 125, y + 25);
     } else if (direction == "down") {
-        triangle(75, y - 25, 100, y + 25, 125, y - 25);
+        rect()
     } else if (direction == "up") {
-        rect(300, 350, 50, 50);
+        rect(x, 350, 50, 50);
     }
 }
