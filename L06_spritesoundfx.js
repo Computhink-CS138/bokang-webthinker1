@@ -82,7 +82,9 @@ function draw() {
         x += 5;
     }
 
-    if (x === 400)
+    if (x === 400 || x === 0) {
+        
+    }
 
     y = constrain(y, 50, width - 100);
     x = constrain(x, 50, height - 100);
