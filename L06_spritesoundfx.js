@@ -33,7 +33,7 @@ function draw() {
     x = constrain(x, 0, height);
 
     if (keyIsDown(32)) {
-        
+        fill()
     }
 
     if (direction == "up") {
