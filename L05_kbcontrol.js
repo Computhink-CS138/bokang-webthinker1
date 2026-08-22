@@ -3,8 +3,9 @@ function setup() {
     background(220);
 }
 let x = 0
-let y = 100
+let y = 
 let direction = "up"
+
 function draw() {
     background(220);
     if (keyIsDown(UP_ARROW)) {
