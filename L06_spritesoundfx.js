@@ -82,11 +82,10 @@ function draw() {
         x += 5;
     }
 
-    if (x === 400 || x === 0) {
+    if (x === 400 || x === 0 || y === 400 || y === 0) {
         background("red")
-    } else if (y === 400 || y === 0) {
-        background()
-    }
+    } 
+
 
     y = constrain(y, 50, width - 100);
     x = constrain(x, 50, height - 100);
