@@ -10,12 +10,12 @@ function setup() {
 function draw() {
     background(220);
     if (keyIsDown(UP_ARROW)) {
-        y -= 100;
+        y -= 5;
         direction = "up";
     }
 
     if (keyIsDown(DOWN_ARROW)) {
-        y += 100;
+        y += 5;
         direction = "down";
     }
 
