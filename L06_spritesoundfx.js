@@ -58,5 +58,6 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(200, 200)
+    createCanvas(200, 200);
+    BigM
 }
