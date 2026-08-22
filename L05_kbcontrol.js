@@ -27,17 +27,17 @@ function draw() {
 
 
 
-function mouseMoved() {
-    if (mouseX < 74) {
-        fill("red")
-    }
-    else if (mouseX >= 75 && mouseX < 125){
-        fill("green")
-    }
-    else if (mouseX >= 126) {
-        fill("blue")
-    }
-}
+// function mouseMoved() {
+//     if (mouseX < 74) {
+//         fill("red")
+//     }
+//     else if (mouseX >= 75 && mouseX < 125){
+//         fill("green")
+//     }
+//     else if (mouseX >= 126) {
+//         fill("blue")
+//     }
+// }
 
 // function keyPressed() {
 //     if (key == "w") {
