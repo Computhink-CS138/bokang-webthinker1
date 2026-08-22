@@ -36,7 +36,9 @@ function draw() {
         rect(x, y, 50, 50);
     } else if (direction == "down") {
         rect(x, y, 50, 50);
-    } else if (direction == "up") {
+    } else if (direction == "left") {
         rect(x, y, 50, 50);
+    } else if (direction == "right") {
+        
     }
 }
