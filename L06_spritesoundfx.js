@@ -49,4 +49,4 @@
 //     }
 // }
 
-let soundEffect, 
+let soundEffect, bigMusic, static
