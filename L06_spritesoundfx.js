@@ -84,19 +84,11 @@ function draw() {
         x += 5;
         direction = "right";
     }
-    
+
     y = constrain(y, 50, 350 - 50);
     x = constrain(x, 50, 350 - 50);
 
-    if (direction == "up") {
-       image(staticImage, x, y, 110, 133);
-    } else if (direction == "down") {
-       image(staticImage, x, y, 110, 133);
-    } else if (direction == "left") {
-       image(staticImage, x, y, 110, 133);
-    } else if (direction == "right") {
-       image(staticImage, x, y, 110, 133);
-    }
+    image(staticImage, x, y, 110, 133);
 }
 
 function keyPressed() {
