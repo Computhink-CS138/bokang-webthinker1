@@ -59,5 +59,6 @@ function preload() {
 
 function setup() {
     createCanvas(200, 200);
-    BigM
+    bigMusic.loop();
+    
 }
