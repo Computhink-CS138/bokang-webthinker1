@@ -32,6 +32,8 @@ function draw() {
     y = constrain(y, 0, height);
     x = constrain(x, 0, height);
 
+    if (keyIsDown())
+
     if (direction == "up") {
         rect(x, y, 50, 50);
     } else if (direction == "down") {
