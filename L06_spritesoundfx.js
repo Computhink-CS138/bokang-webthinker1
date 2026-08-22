@@ -1,6 +1,6 @@
-// let x = 100
-// let y = 100
-// let direction = "up"
+let x = 100
+let y = 100
+let direction = "up"
 
 // function setup() {
 //     createCanvas(400, 400);
@@ -70,7 +70,7 @@ function draw() {
 }
 
 //     if (direction == "up") {
-//         rect(x, y, 50, 50); image(staticImage, 0, 0, 110, 133);
+//       image(staticImage, 0, 0, 110, 133);
 //     } else if (direction == "down") {
 //         rect(x, y, 50, 50);
 //     } else if (direction == "left") {
