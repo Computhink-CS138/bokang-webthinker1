@@ -83,7 +83,7 @@ function draw() {
     }
 
     y = constrain(y, 50, width - 100);
-    x = constrain(x, 50, 3);
+    x = constrain(x, 50, height - 100);
 
     image(staticImage, x, y, 110, 133);
 }
