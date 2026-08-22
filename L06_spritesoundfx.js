@@ -64,7 +64,6 @@ function setup() {
 
 function draw() {
     background(220);
-    image(staticImage, 0, 0, 110, 133);
     if (keyIsDown(UP_ARROW)) {
         y -= 5;
     }
