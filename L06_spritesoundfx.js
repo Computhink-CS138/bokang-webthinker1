@@ -35,7 +35,7 @@ function draw() {
     if (keyIsDown(32)) {
         fill(200)
     } else {
-        fill
+        fill(50)
     }
 
     if (direction == "up") {
