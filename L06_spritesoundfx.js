@@ -52,5 +52,5 @@
 let soundEffect, bigMusic, staticImage;
 
 function preload() {
-    soundEffect = loa
+    soundEffect = loadSound("")
 }
