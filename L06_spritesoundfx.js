@@ -83,8 +83,8 @@ function draw() {
     }
 
 
-    y = constrain(y, 50, width - 100);
-    x = constrain(x, 50, height - 100);
+    y = constrain(y, 0, width - 100);
+    x = constrain(x, 0, height - 100);
 
     if (x === 0 || x === width - 100 || y === 0 || y === height - 100) {
         background("red");
