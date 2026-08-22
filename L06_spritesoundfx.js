@@ -64,5 +64,6 @@ function setup() {
 
 function draw() {
     background("lightblue");
-    image(staticImage, 0, 0, 110, )
+    image(staticImage, 0, 0, 110, 133);
 }
+
