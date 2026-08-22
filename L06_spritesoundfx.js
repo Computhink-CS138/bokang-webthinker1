@@ -30,7 +30,7 @@ function draw() {
     }
 
     y = constrain(y, 50, 350, - 50);
-    x = constrain(x, 0, height);
+    x = constrain(x, 50, 350, - 50);
 
     if (keyIsDown(32)) {
         fill(200)
