@@ -82,12 +82,10 @@ function draw() {
     if (keyIsDown(RIGHT_ARROW)) {
         x += 5;
         direction = "right";
+    }
     background("lightblue");
     image(staticImage, 0, 0, 110, 133);
-    }
-
-
-
+    
 }
 
 //     if (direction == "up") {
