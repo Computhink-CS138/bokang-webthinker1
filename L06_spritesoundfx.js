@@ -49,4 +49,8 @@
 //     }
 // }
 
-let soundEffect, bigMusic, static
+let soundEffect, bigMusic, staticImage;
+
+function preload() {
+    
+}
