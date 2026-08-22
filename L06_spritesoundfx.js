@@ -88,6 +88,8 @@ function draw() {
 
     if (x === width - 100 || x === 0 || y === height - 100 || y === 0) {
         background("red");
+
+        if (soundEffect)
         popSound.play();
     } 
 
