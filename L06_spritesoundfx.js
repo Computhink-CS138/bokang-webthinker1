@@ -62,21 +62,42 @@ function setup() {
     bigMusic.loop();
 }
 
-
-
 function draw() {
+    background(220);
+    if (keyIsDown(UP_ARROW)) {
+        y -= 5;
+        direction = "up";
+    }
+
+    if (keyIsDown(DOWN_ARROW)) {
+        y += 5;
+        direction = "down";
+    }
+
+    if (keyIsDown(LEFT_ARROW)) {
+        x -= 5;
+        direction = "left";
+    }
+
+    if (keyIsDown(RIGHT_ARROW)) {
+        x += 5;
+        direction = "right";
     background("lightblue");
     image(staticImage, 0, 0, 110, 133);
+    }
+
+
+
 }
 
 //     if (direction == "up") {
-//        image(staticImage, 0, 0, 110, 133);
+//        image(staticImage, x, y, 110, 133);
 //     } else if (direction == "down") {
-//         rect(x, y, 50, 50);
+//        image(staticImage, x, y, 110, 133);
 //     } else if (direction == "left") {
-//         rect(x, y, 50, 50);
+//        image(staticImage, x, y, 110, 133);
 //     } else if (direction == "right") {
-//         rect(x, y, 50, 50);
+//        image(staticImage, x, y, 110, 133);
 //     }
 // }
 
