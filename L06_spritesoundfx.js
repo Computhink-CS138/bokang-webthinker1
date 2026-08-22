@@ -29,7 +29,7 @@ function draw() {
         direction = "right";
     }
 
-    y = constrain(y, 0, height);
+    y = constrain(y, 50, );
     x = constrain(x, 0, height);
 
     if (keyIsDown(32)) {
