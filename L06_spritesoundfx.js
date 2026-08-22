@@ -91,7 +91,6 @@ function draw() {
 
         if (soundEffect.isPlaying()) {
             soundEffect.play();
-
         }
     } 
 
