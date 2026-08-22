@@ -56,7 +56,7 @@ let y = 100;
 function preload() {
     soundEffect = loadSound('assets/pop.mp3');
     bigMusic = loadSound('assets/bossaNova.mp3');
-    staticImage = loadImage('assets/pop.mp3');
+    staticImage = loadImage('assets/pico-.mp3');
 }
 
 function setup() {
