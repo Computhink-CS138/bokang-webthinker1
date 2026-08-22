@@ -63,6 +63,8 @@ function setup() {
 }
 
 function draw() {
+    background("lightblue");
+    image(staticImage, 0, 0, 110, 133);
     background(220);
     if (keyIsDown(UP_ARROW)) {
         y -= 5;
@@ -83,8 +85,6 @@ function draw() {
         x += 5;
         direction = "right";
     }
-    background("lightblue");
-    image(staticImage, 0, 0, 110, 133);
     if (direction == "up") {
        image(staticImage, x, y, 110, 133);
     } else if (direction == "down") {
