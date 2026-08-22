@@ -72,20 +72,18 @@ function setup() {
 //     }
 // }
 
-// function keyReleased() {
-//     background(220); 
-// }
+function keyReleased() {
+    background(220); 
+}
 
-// function keyPressed() {
-//     console.log("key:", key);
-//     console.log("keycode:", keyCode);
-//     if (key == 'c') {
-//         circle(200, 200, 50);
-//     elif (keyCode == 32)
-//         square(200, 200, 50);
-    
-    
-//     }
-// }
+function keyPressed() {
+    console.log("key:", key);
+    console.log("keycode:", keyCode);
+    if (key == 'c') {
+        circle(200, 200, 50);
+    elif (keyCode == 32)
+        square(200, 200, 50);
+    }
+}
 
 
