@@ -1,6 +1,7 @@
 let picoImage;
 let popSound; 
 let x;
+let y;
 
 
 function preload() {
@@ -14,7 +15,7 @@ function setup() {
 
 function draw() {
     background("gray");
-    image(picoImage, width / 2, height / 2, 100, 100); // (image, x, y, width, height)
+    image(picoImage, width / 2, height / 2, 100, 100); // (image, x, y, width, height);
         if (keyIsDown(UP_ARROW)) {
         y -= 5;
     }
