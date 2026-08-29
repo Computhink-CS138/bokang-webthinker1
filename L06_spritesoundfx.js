@@ -49,60 +49,60 @@
 //     }
 // }
 
-let soundEffect, bigMusic, staticImage;
-let x = 100;
-let y = 100;
+// let soundEffect, bigMusic, staticImage;
+// let x = 100;
+// let y = 100;
 
-function preload() {
-    soundEffect = loadSound('assets/pop.mp3');
-    bigMusic = loadSound('assets/bossaNova.mp3');
-    staticImage = loadImage('assets/pico-a.png  ');
-}
+// function preload() {
+//     soundEffect = loadSound('assets/pop.mp3');
+//     bigMusic = loadSound('assets/bossaNova.mp3');
+//     staticImage = loadImage('assets/pico-a.png  ');
+// }
 
-function setup() {
-    createCanvas(400, 400);
-    bigMusic.loop();
-}
+// function setup() {
+//     createCanvas(400, 400);
+//     bigMusic.loop();
+// }
 
-function draw() {
-    background(220);
-    if (keyIsDown(UP_ARROW)) {
-        y -= 5;
-    }
+// function draw() {
+//     background(220);
+//     if (keyIsDown(UP_ARROW)) {
+//         y -= 5;
+//     }
 
-    if (keyIsDown(DOWN_ARROW)) {
-        y += 5;
-    }
+//     if (keyIsDown(DOWN_ARROW)) {
+//         y += 5;
+//     }
 
-    if (keyIsDown(LEFT_ARROW)) {
-        x -= 5;
-    }
+//     if (keyIsDown(LEFT_ARROW)) {
+//         x -= 5;
+//     }
 
-    if (keyIsDown(RIGHT_ARROW)) {
-        x += 5;
-    }
-
-
-    y = constrain(y, 0, width - 100);
-    x = constrain(x, 0, height - 100);
-
-    if (x === 0 || x === width - 100 || y === 0 || y === height - 100) {
-        background("red");
-
-        if (!soundEffect.isPlaying()) {
-            soundEffect.play();
-        }
-    } 
+//     if (keyIsDown(RIGHT_ARROW)) {
+//         x += 5;
+//     }
 
 
-    image(staticImage, x, y, 100, 100);
-}
+//     y = constrain(y, 0, width - 100);
+//     x = constrain(x, 0, height - 100);
 
-function keyPressed() {
-    if (keycode === 32) {
-        soundEffect.play();
-    }
-}
+//     if (x === 0 || x === width - 100 || y === 0 || y === height - 100) {
+//         background("red");
+
+//         if (!soundEffect.isPlaying()) {
+//             soundEffect.play();
+//         }
+//     } 
+
+
+//     image(staticImage, x, y, 100, 100);
+// }
+
+// function keyPressed() {
+//     if (keycode === 32) {
+//         soundEffect.play();
+//     }
+// }
 
 
 
