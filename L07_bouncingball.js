@@ -67,9 +67,10 @@ function draw() {
     ballY += ballSpeedY;
     
     noStroke();
-    fill("#FFA500")
+    fill("#FFA500");
 
     circle(ballX, ballY, ballSize);
+
 }
 
 
