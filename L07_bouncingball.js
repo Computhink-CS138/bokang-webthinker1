@@ -13,6 +13,25 @@ function setup() {
 function draw() {
     background("gray");
     image(picoImage, width / 2, height / 2, 100, 100); // (image, x, y, width, height)
-    
+        if (keyIsDown(UP_ARROW)) {
+ y -= 5;
+    }
+
+    if (keyIsDown(DOWN_ARROW)) {
+        y += 5;
+    }
+
+    if (keyIsDown(LEFT_ARROW)) {
+        x -= 5;
+    }
+
+    if (keyIsDown(RIGHT_ARROW)) {
+        x += 5;
+    }
+
+
+    y = constrain(y, 0, width - 100);
+    x = constrain(x, 0, height - 100);
+
 }
 
