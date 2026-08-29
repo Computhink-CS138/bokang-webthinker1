@@ -64,7 +64,6 @@ function draw() {
     fill("#FFA500")
 
     circle(ballX, ballY, ballSize);
-
 }
 
 
