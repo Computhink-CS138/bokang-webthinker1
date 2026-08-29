@@ -34,6 +34,7 @@ function draw() {
 
     y = constrain(y, 0, width - 100);
     x = constrain(x, 0, height - 100);
+    
     image(picoImage, x, y, 100, 100);
      // (image, x, y, width, height);
 
