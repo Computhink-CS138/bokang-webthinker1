@@ -68,7 +68,7 @@ function draw() {
     if (ballX <= 0 || ballX >- width) {
         ballSpeedX *= -1;
     }
-    if (ball)
+    if (ballY <= 0 || ballY >= height);
     
     noStroke();
     fill("#FFA500");
