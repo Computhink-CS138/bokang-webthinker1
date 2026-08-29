@@ -106,3 +106,5 @@ function keyPressed() {
 
 
 
+let picoImage;
+let
