@@ -62,7 +62,8 @@ function setup() {
 
 function draw() {
     background(220);
-    b    noStroke();
+    ballX 
+    noStroke();
     fill("#FFA500")
 
     circle(ballX, ballY, ballSize);
