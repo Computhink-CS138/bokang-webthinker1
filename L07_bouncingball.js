@@ -61,7 +61,7 @@ function setup() {
 function draw() {
     background(220);
     noStroke();
-    FileLis
+    fill("")
 
     circle(ballX, ballY, ballSize);
 
