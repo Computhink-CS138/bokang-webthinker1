@@ -47,6 +47,6 @@ function keyPressed() {
 
 function keyReleased() {
     if (key === " ") {
-        
+        picoWidth = 100;
     }
 }
