@@ -50,7 +50,8 @@
 //         picoWidth = 100;
 //     }
 // }
-let B
+let ballx = 300;
+let bally = 
 
 
 
