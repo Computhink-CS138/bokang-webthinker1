@@ -1,7 +1,7 @@
 let picoImage;
 let popSound; 
-let x = 200;
-let y = 300;
+let x = 0;
+let y = 0;
 
 
 function preload() {
