@@ -63,8 +63,8 @@ function setup() {
 function draw() {
     background(220);
 
+    ballX += ballSpeedX;
     
-    ballX += ballSpeedX
     noStroke();
     fill("#FFA500")
 
