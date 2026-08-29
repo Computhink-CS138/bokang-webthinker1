@@ -46,5 +46,7 @@ function keyPressed() {
 }
 
 function keyReleased() {
-    
+    if (key === " ") {
+        
+    }
 }
