@@ -69,7 +69,7 @@ function draw() {
         ballSpeedX *= -1;
     }
     if (ballY <= 0 || ballY >= height) {
-        ballSpeedY
+        ballSpeedY *= -1
     }
     
     noStroke();
