@@ -14,7 +14,7 @@ function draw() {
     background("gray");
     image(picoImage, width / 2, height / 2, 100, 100); // (image, x, y, width, height)
         if (keyIsDown(UP_ARROW)) {
-         y -= 5;
+        y -= 5;
     }
 
     if (keyIsDown(DOWN_ARROW)) {
