@@ -64,6 +64,7 @@ function draw() {
     background(220);
 
     ballX += ballSpeedX;
+    bally
     
     noStroke();
     fill("#FFA500")
