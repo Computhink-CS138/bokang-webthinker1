@@ -109,7 +109,7 @@
 let picoImage;
 let popSound; 
 function preload() {
-    soundEffect = loadSound('assets/pop.mp3');
+    popSound = loadSound('assets/pop.mp3');
     bigMusic = loadSound('assets/bossaNova.mp3');
     picoImage = loadImage('assets/pico-a.png  ');
 }
