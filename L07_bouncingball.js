@@ -50,6 +50,9 @@
 //         picoWidth = 100;
 //     }
 // }
+let B
+
+
 
 function setup() {
     createCanvas(600, 400);
@@ -57,7 +60,7 @@ function setup() {
 
 function draw() {
     background(220);
-    
+
 }
 
 
