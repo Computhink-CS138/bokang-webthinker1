@@ -60,7 +60,7 @@ function setup() {
 
 function draw() {
     background(220);
-    CSSNumericValue(ballX, ballY, ballSize);
+    circle(ballX, ballY, ballSize);
 
 }
 
