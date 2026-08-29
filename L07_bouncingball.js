@@ -65,7 +65,7 @@ function draw() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
-    let 
+    ballSize = random(50);
 
     if (ballX <= 0 + ballSize / 2 || ballX >= width - ballSize / 2) {
         ballSpeedX *= -1;
