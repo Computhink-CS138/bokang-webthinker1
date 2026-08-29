@@ -30,8 +30,8 @@ function draw() {
     if (keyIsDown(RIGHT_ARROW)) {
         x += 5;
     }
-    y = constrain(y, 0, width - 100);
-    x = constrain(x, 0, height - 100);
+    x = constrain(x, 0, width - 100);
+    y = constrain(x, 0, height - 100);
 
     image(picoImage, x, y, 100, 100);
      // (image, x, y, width, height);
