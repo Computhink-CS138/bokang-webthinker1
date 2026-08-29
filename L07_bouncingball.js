@@ -12,7 +12,7 @@ function setup() {
 
 function draw() {
     background("gray");
-    
+    image(picoImage, x, y, 100, 100);
 
 }
 
