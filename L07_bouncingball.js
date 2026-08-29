@@ -72,7 +72,7 @@ function draw() {
     }
     
     noStroke();
-    fill("#FFA500");
+    fill(random(0), );
 
     circle(ballX, ballY, ballSize);
 }
