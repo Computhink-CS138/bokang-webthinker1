@@ -41,7 +41,7 @@ function draw() {
 function keyPressed() {
     if (keyCode === 32) {
         popSound.play();
-        picoWidth = 50
+        picoWidth = 50;
     }
 }
 
