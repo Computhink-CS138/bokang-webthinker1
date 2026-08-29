@@ -72,7 +72,7 @@ function draw() {
     }
     
     noStroke();
-    fill(random(0), random(0), random(0));
+    fill(random(255), random(255), random(255));
 
     circle(ballX, ballY, ballSize);
 }
