@@ -11,5 +11,6 @@ function setup() {
 }
 
 function draw() {
-    background("gray")
+    background("gray");
 }
+
