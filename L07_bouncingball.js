@@ -70,7 +70,7 @@ function draw() {
     if (ballX <= 0 + ballSize / 2 || ballX >= width - ballSize / 2) {
         ballSpeedX *= -1;
     }
-    if (ballY <= 0 - ballSize / 2 || ballY >= height - ballSize / 2) {
+    if (ballY <= 0 + ballSize / 2 || ballY >= height - ballSize / 2) {
         ballSpeedY *= -1;
     }
     
