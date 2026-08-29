@@ -65,7 +65,7 @@ function draw() {
 
     ballX += ballSpeedX;
     ballY += ballSpeedY;
-    
+    if (ballX)
     
     noStroke();
     fill("#FFA500");
