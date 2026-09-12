@@ -3,8 +3,6 @@ let favouriteFoods = ["Pizza", "Burger", "Sushi", "Tacos", "pasta"];
 function setup() {
     createCanvas(400, 400);
     background(220);
-
-    textSize(10);
     textAlign(CENTER, CENTER);
     text("Hello!", width / 2, height / 2); // (string, x pos, y pos);
     text("My name is bokang", 50, 50);
