@@ -1,4 +1,5 @@
-let 
+let squareX;
+let squareY;
 
 
 function setup() {
