@@ -9,7 +9,10 @@ function setup() {
 function draw() {
     squareX += 10;
     squareY += 10;
-    
+   
+    if (squareX)
+
+
     fill(255, 255, 0);
     rect(squareX, squareY, 100, 100);
 
