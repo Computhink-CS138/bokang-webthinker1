@@ -3,7 +3,7 @@ let squareY = 0;
 let speed = 5;
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(400, 400);
     background(220);
 
     textSize(40);
