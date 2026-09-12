@@ -8,7 +8,7 @@ function setup() {
 }
 
 function draw() {
-    squareX += 10;
+    squareX += speed;
     squareY += speed;
    
     if (squareX > width) {
