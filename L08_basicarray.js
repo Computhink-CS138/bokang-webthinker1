@@ -8,7 +8,7 @@ function setup() {
 
     textSize(40);
 
-    text("Hello!", width / 2, height / 2); //
+    text("Hello!", width / 2, height / 2); // (string, x pos, y pos);
 }
 
 function draw() {
