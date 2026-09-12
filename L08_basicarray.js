@@ -7,7 +7,8 @@ function setup() {
 }
 
 function draw() {
-    
+    squareX += 10;
+    sq
     fill(255, 255, 0);
     rect(squareX, squareY, 100, 100);
 
