@@ -10,7 +10,7 @@ function draw() {
     squareX += 10;
     squareY += 10;
    
-    if (squareX)
+    if (squareX )
 
 
     fill(255, 255, 0);
