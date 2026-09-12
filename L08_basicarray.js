@@ -11,7 +11,7 @@ function draw() {
     background(220);
 
     fill(0);
-    text("My favourite Foods", 50, Ypos);
+    text("My favourite Foods", 50, Ypos - 30);
 
     for (let i = 0; i < favouriteFoods.length; i++) {
         text((i + 1) + ". " + favouriteFoods[i], 50, Ypos + i * 30); // 400 + 0 x 30 = 400
