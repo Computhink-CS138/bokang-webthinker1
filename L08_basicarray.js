@@ -1,6 +1,7 @@
 let squareX = 0;
 let squareY = 0;
 
+
 function setup() {
     createCanvas(600, 400);
     background(220);
@@ -11,7 +12,7 @@ function draw() {
     squareY += 10;
    
     if (squareX > width) {
-        
+
     }
 
 
