@@ -7,6 +7,7 @@ function setup() {
 }
 
 function draw() {
+    fill(255, 255, 0);
     rect(width / 2, height / 2, 100, 100);
 }
 
