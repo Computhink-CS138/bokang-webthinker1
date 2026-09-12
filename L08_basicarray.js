@@ -1,6 +1,4 @@
-let squareX = 0;
-let squareY = 0;
-let speed = 5;
+let 
 
 function setup() {
     createCanvas(400, 400);
