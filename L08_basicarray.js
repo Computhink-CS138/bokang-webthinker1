@@ -11,6 +11,6 @@ function setup() {
     text("Hello!", width / 2, height / 2); // (string, x pos, y pos);
 }
 
-function draw() {
-    text
+function text() {
+    text("")
 }
