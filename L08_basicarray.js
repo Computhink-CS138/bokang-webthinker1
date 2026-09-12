@@ -8,10 +8,11 @@ function setup() {
 
 function draw() {
     background(220);
-
+    
     fill(0);
     text("My favourite Foods", 50, 50);
-    
+
+
     for (let i = 1; i < 11; i++) {
         text((i + 1) + ". " + favouriteFoods[i], 50, 80 + i * 30);
     }
