@@ -6,6 +6,10 @@ function setup() {
     textAlign(LEFT, TOP);
 }
 
+function draw() {
+    
+}
+
 for (let i = 1; i < 11; i++) {
 
 }
