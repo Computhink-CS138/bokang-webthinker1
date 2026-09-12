@@ -1,5 +1,6 @@
 let favouriteFoods = ["Pizza", "Burger", "Sushi", "Tacos", "pasta"];
 
+
 function setup() {
     createCanvas(400, 400);
     textSize(24);
@@ -8,7 +9,7 @@ function setup() {
 
 function draw() {
     background(220);
-    
+
     fill(0);
     text("My favourite Foods", 50, 50);
 
