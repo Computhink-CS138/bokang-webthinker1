@@ -8,7 +8,8 @@ function setup() {
 }
 
 function draw() {
-    background
+    background(220);
+    
     if (squareX > width) {
         speed *= -1;
     }
