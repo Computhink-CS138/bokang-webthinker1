@@ -8,7 +8,9 @@ function setup() {
 
 function draw() {
     background(220);
-    
+
+    fill(0);
+    text("")
 }
 
 for (let i = 1; i < 11; i++) {
