@@ -12,25 +12,5 @@ function setup() {
 }
 
 function draw() {
-    background(220);
-
-    if (squareX > width - 100) {
-        speed *= -1;
-    } else if (squareX < width - 100) {
-        speed *= 1;
-    }
-
-    if (squareY > height - 100) {
-        speed *= -1;
-    } else if (square )
-
-    squareX += speed;
-   
-
-    fill(255, 255, 0);
-    rect(squareX, squareY, 100, 100);
-
+    
 }
-
-
-
