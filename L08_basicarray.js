@@ -12,7 +12,7 @@ function draw() {
     fill(0);
     text("My favourite Foods", 50, 50);
     for (let i = 1; i < 11; i++) {
-        text((i + 1) + ". " + )
+        text((i + 1) + ". " + favouriteFoods[i])
     }
 }
 
