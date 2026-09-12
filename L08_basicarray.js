@@ -14,7 +14,7 @@ function draw() {
     text("My favourite Foods", 50, Ypos);
 
     for (let i = 0; i < favouriteFoods.length; i++) {
-        text((i + 1) + ". " + favouriteFoods[i], 50, Ypos + i * 30); // ypos + 
+        text((i + 1) + ". " + favouriteFoods[i], 50, Ypos + i * 30); // ypos + 0 x 30 = 400
     }
     Ypos -= 1
 }
