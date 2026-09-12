@@ -17,7 +17,7 @@ function draw() {
     }
 
     if (squareY > height - 100) {
-
+        speed *= 
     }
 
     squareX += speed;
