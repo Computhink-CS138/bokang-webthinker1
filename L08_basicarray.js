@@ -10,7 +10,7 @@ function draw() {
     background(220);
 
     fill(0);
-    text("")
+    text("My favourite Foods")
 }
 
 for (let i = 1; i < 11; i++) {
