@@ -14,6 +14,6 @@ function setup() {
     text("I like playing video games", 50, 150);
 }
 
-function text() {
-    
+for (let i = 1; i < 11; i++) {
+
 }
