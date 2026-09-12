@@ -11,7 +11,7 @@ function draw() {
     background(220);
 
     fill(0);
-    text("My favourite Foods", 50, 50);
+    text("My favourite Foods", 50, Ypos);
 
 
     for (let i = 1; i < 11; i++) {
