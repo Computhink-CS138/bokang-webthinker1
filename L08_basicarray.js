@@ -2,12 +2,8 @@ let favouriteFoods = ["Pizza", "Burger", "Sushi", "Tacos", "pasta"];
 
 function setup() {
     createCanvas(400, 400);
-    background(220);
-    textAlign(CENTER, CENTER);
-    text("Hello!", width / 2, height / 2); // (string, x pos, y pos);
-    text("My name is bokang", 50, 50);
-    text("My age is 13", 50, 100);
-    text("I like playing video games", 50, 150);
+    textSize(24);
+    textAlign(LEFT, TOP);
 }
 
 for (let i = 1; i < 11; i++) {
