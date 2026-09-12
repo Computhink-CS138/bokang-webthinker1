@@ -15,7 +15,5 @@ function setup() {
 }
 
 function text() {
-    text("My name is bokang", 50, 50);
-    text("My age is 13", 50, 100);
-    text("I like playing video games", 50, 150);
+    
 }
