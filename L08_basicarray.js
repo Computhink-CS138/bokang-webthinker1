@@ -10,7 +10,9 @@ function draw() {
     squareX += 10;
     squareY += 10;
    
-    if (squareX )
+    if (squareX > width) {
+        
+    }
 
 
     fill(255, 255, 0);
