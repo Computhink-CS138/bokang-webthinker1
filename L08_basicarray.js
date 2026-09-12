@@ -10,11 +10,13 @@ function setup() {
 function draw() {
     background(220);
 
-    if (squareX > width) {
+    if (squareX > width - 100) {
         speed *= -1;
+    } else if (squareX < width - 100) {
+        speed *= 1;
     }
 
-    if ()
+    if (squareX > length)
 
     squareX += speed;
    
