@@ -12,5 +12,5 @@ function setup() {
 }
 
 function text() {
-    text("")
+    text("My name is bokang")
 }
