@@ -16,7 +16,7 @@ function draw() {
     for (let i = 1; i < 11; i++) {
         text((i + 1) + ". " + favouriteFoods[i], 50, 80 + i * 30);
     }
-    Ypos 
+    Ypos -= 1
 }
 
 
