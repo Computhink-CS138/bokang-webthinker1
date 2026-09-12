@@ -16,7 +16,9 @@ function draw() {
         speed *= 1;
     }
 
-    if (squareY > length - 100)
+    if (squareY > length - 100) {
+        
+    }
 
     squareX += speed;
    
