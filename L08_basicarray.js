@@ -1,6 +1,6 @@
 let squareX = 0;
 let squareY = 0;
-
+let speed = 5;
 
 function setup() {
     createCanvas(600, 400);
@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
     squareX += 10;
-    squareY += 10;
+    squareY += speed;
    
     if (squareX > width) {
 
