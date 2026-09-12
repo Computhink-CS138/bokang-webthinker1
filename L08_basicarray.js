@@ -1,5 +1,5 @@
 let favouriteFoods = ["Pizza", "Burger", "Sushi", "Tacos", "pasta"];
-let Ypos = 80;
+let Ypos = 400;
 
 function setup() {
     createCanvas(400, 400);
