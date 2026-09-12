@@ -8,7 +8,7 @@ function setup() {
 
     textSize(40);
 
-    text("")
+    text("Hello!", width / 2, )
 }
 
 function draw() {
