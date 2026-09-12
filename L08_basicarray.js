@@ -12,12 +12,12 @@ function draw() {
     squareY += speed;
    
     if (squareX > width) {
-
+        speed
     }
 
     squareX += speed;
     squareY += speed;
-    
+
     fill(255, 255, 0);
     rect(squareX, squareY, 100, 100);
 
