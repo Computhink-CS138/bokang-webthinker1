@@ -1,5 +1,5 @@
-let squareX;
-let squareY;
+let squareX = 0;
+let squareY = 0;
 
 function setup() {
     createCanvas(600, 400);
