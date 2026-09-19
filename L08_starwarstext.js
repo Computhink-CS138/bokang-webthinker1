@@ -7,7 +7,7 @@ let storyText = [
     "THE BEGINNING",
     "",
     "",
-    
+    ""
 ]
 
 function setup() {
