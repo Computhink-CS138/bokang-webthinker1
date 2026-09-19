@@ -14,5 +14,5 @@ function draw() {
     background(0);
 
     text("asd", width / 2, Ypos);
-    Ypos -= 1;
+    yPos -= 1;
 }
