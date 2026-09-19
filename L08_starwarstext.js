@@ -4,3 +4,6 @@ function setup() {
     textAlign(LEFT, TOP);
 }
 
+function draw() {
+    
+}
