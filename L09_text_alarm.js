@@ -1,4 +1,4 @@
-let hour;
+let hr;
 let minute;
 let second;
 
@@ -16,5 +16,5 @@ function draw() {
 
     text(hr, width / 2, height / 2);
     text(min, width / 2, height / 2 + 50);
-    text(sec, )
+    text(sec, width / 2, height / 2 + 100);
 }
