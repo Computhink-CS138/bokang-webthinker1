@@ -12,7 +12,7 @@ function setup() {
 function draw() {
     //reset canvas
     background(0);
-
+    textAlign()
     text("asd", width / 2, yPos);
     yPos -= 1;
 }
