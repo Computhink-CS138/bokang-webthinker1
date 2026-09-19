@@ -1,4 +1,5 @@
-let 
+let h;
+letm
 
 function setup() {
     createCanvas(600, 400);
@@ -8,5 +9,5 @@ function setup() {
 }
 
 function draw() {
-    
+
 }
