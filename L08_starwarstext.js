@@ -28,9 +28,9 @@ function draw() {
     //reset canvas
     background(0);
 
-    yPos -= 1;
+  
     for (let i = 0; i < storyText.length; i++) {
         text("asd", width / 2, yPos);
-            yPos -= 1;
+    yPos -= 1;
 }
 }
