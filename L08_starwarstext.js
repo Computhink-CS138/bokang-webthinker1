@@ -1,6 +1,6 @@
 let yPos;
 let storyText = [
-    ""
+    "A long time ago"
 ]
 
 function setup() {
