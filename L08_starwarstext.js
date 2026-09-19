@@ -33,6 +33,6 @@ function draw() {
         text(storyText[i], width / 2, yPos + i * 50);
 
     
-    yPos -= 1;
+    yPos -= 0.1;
 }
 }
