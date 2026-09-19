@@ -30,7 +30,7 @@ function draw() {
 
   
     for (let i = 0; i < storyText.length; i++) {
-        text("asd", width / 2, yPos);
+        text(storyText, width / 2, yPos);
     yPos -= 1;
 }
 }
