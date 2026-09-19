@@ -1,6 +1,7 @@
 let hr;
 let min;
 let sec;
+let timeString;
 
 function setup() {
     createCanvas(600, 400);
