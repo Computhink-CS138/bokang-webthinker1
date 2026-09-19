@@ -24,6 +24,9 @@ function setup() {
     yPos = height;
 }
 
+function preload() {
+    
+}
 function draw() {
     //reset canvas
     background(0);
