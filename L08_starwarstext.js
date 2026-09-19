@@ -10,6 +10,7 @@ function setup() {
 }
 
 function draw() {
+    //reset canvas
     background(0);
 
     text("asd", width / 2, Ypos);
