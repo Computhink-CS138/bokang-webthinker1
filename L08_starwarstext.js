@@ -26,6 +26,7 @@ function setup() {
     fill("rgb(255, 255, 0)");
 
     bigMusic.play();
+    bigMusic.loop
 
     yPos = height;
 }
