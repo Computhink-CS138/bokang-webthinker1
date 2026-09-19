@@ -1,4 +1,4 @@
-let Ypos
+let Ypos;
 
 function setup() {
     createCanvas(600, 400);
@@ -6,7 +6,7 @@ function setup() {
     textAlign(LEFT, CENTER);
     fill("rgb(255, 255, 0)");
 
-    Ypos = hieght;
+    Ypos = height;
 }
 
 function draw() {
