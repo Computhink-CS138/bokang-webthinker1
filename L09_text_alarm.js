@@ -10,11 +10,11 @@ function setup() {
 }
 
 function draw() {
-    hour = hour();
-    minute = minute();
-    second = second();
+    hr = hour();
+    min = minute();
+    sec = second();
 
-    text(hour, width / 2, height / 2);
-    text(minute, width / 2, height / 2 + 50);
+    text(hr, width / 2, height / 2);
+    text(min, width / 2, height / 2 + 50);
     text(second)
 }
