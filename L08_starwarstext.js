@@ -25,7 +25,7 @@ function setup() {
 }
 
 function preload() {
-    
+    bigMusic = load
 }
 function draw() {
     //reset canvas
