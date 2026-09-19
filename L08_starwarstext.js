@@ -20,6 +20,7 @@ function setup() {
     textSize(24);
     textAlign(CENTER, CENTER);
     fill("rgb(255, 255, 0)");
+    
 
     yPos = height;
 }
@@ -31,7 +32,8 @@ function draw() {
     //reset canvas
     background(0);
 
-  
+
+
     for (let i = 0; i < storyText.length; i++) {
         text(storyText[i], width / 2, yPos + i * 50);
 
