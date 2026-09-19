@@ -1,4 +1,4 @@
-let h;
+let hr;
 let min;
 let sec;
 
