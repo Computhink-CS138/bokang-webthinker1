@@ -7,4 +7,6 @@ function setup() {
     fill("rgb(208, 0, 255)");
 }
 
-
+function draw() {
+    
+}
