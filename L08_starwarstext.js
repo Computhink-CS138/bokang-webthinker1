@@ -30,4 +30,6 @@ function draw() {
 
     text("asd", width / 2, yPos);
     yPos -= 1;
+    for (let i = 0; i < favouriteFoods.length; i++) {
+        text((i + 1) + ". " + favouriteFoods[i], 50, Ypos + i * 30);
 }
