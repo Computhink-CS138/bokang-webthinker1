@@ -11,5 +11,5 @@ function setup() {
 
 function draw() {
     hr = hour();
-    
+    minute = minute();
 }
