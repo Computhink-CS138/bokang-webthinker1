@@ -10,6 +10,6 @@ function setup() {
 }
 
 function draw() {
-    hr = hour();
+    hour = hour();
     minute = minute();
 }
