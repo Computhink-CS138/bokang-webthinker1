@@ -25,7 +25,7 @@ function setup() {
     textAlign(CENTER, CENTER);
     fill("rgb(255, 255, 0)");
 
-    bigMusic.play
+    bigMusic.play();
 
     yPos = height;
 }
