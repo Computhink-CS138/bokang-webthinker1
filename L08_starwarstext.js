@@ -15,6 +15,10 @@ let storyText = [
     "Empire"
 ];
 
+function preload() {
+    bigMusic = loadSound("assets/star_wars_theme_8_bit.mp3");
+}
+
 function setup() {
     createCanvas(600, 400);
     textSize(24);
@@ -26,9 +30,6 @@ function setup() {
     yPos = height;
 }
 
-function preload() {
-    bigMusic = loadSound("assets/star_wars_theme_8_bit.mp3");
-}
 function draw() {
     //reset canvas
     background(0);
