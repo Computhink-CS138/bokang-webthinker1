@@ -13,7 +13,7 @@ let storyText = [
     "won their first victory",
     "against the evil Galactic", 
     "Empire"
-]
+];
 
 function setup() {
     createCanvas(600, 400);
