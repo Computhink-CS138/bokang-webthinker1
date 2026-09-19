@@ -6,6 +6,7 @@ let storyText = [
     "EPISODE 1",
     "THE BEGINNING",
     "",
+    "",
     
 ]
 
