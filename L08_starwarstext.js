@@ -8,7 +8,8 @@ let storyText = [
     "",
     "",
     "It was a period of civil war",
-    "r"
+    "Rebel spaceships",
+    "   "
 ]
 
 function setup() {
