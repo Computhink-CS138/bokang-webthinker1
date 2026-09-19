@@ -25,7 +25,7 @@ function setup() {
 }
 
 function preload() {
-    bigMusic = loadSound("assets")
+    bigMusic = loadSound("assets/star_wars_theme")
 }
 function draw() {
     //reset canvas
