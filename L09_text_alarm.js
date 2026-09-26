@@ -70,6 +70,9 @@ function draw() {
     text(timer, width / 2, height / 2);
 }
 
+function mousePressed() {
+    
+}
 
 
 function updateCountdown() {
@@ -82,9 +85,6 @@ function updateCountdown() {
     }
 }
 
-function mousePressed() {
-    
-}
 
 
 
