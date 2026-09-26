@@ -72,7 +72,7 @@ function draw() {
 function updateCountdown() {
     clear();
     timer -= 1 
-    
+    clearInterval(intervalid);
     
 }
 
