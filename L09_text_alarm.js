@@ -76,6 +76,7 @@ function draw() {
 function mousePressed() {
     if (countdownStart = false) {
         countdownStart = true;
+        timer = 5;
         intervalId = setInterval(updateCountdown, 1000);
     }
     
@@ -90,7 +91,6 @@ function updateCountdown() {
     if (timer <= 0) {
         clearInterval(intervalId);
         countdownStart = false;
-        timer = 5;
     }
 }
 
