@@ -21,7 +21,13 @@
 //     text(timeString, width / 2, height / 2);
 // }
 
-let intervalid
+let intervalid;
+
+let x = 0;
+
+function setup() {
+    
+}
 
 
 
