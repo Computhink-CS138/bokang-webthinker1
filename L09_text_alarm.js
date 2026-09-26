@@ -57,8 +57,8 @@ let intervalid;
 
 function setup() {
     createCanvas(600, 400);
-
     
+    intervalid = setInterval(drawCircle, 100);
 }
 
 
