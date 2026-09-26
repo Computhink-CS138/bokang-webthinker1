@@ -81,6 +81,7 @@ function updateCountdown() {
 
     if (timer <= 0) {
         clearInterval(intervalId);
+        text("booo", 300, 200);
     }
 }
 
