@@ -58,7 +58,7 @@ let intervalId;
 let timer = 5;
 
 function setup() {
-    fill("black");
+    
     createCanvas(600, 400);
     
 
