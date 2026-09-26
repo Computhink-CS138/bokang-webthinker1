@@ -62,6 +62,7 @@ function setup() {
 }
 
 function updateCountdown() {
+    clear();
     
 }
 
