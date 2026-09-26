@@ -1,5 +1,5 @@
 let inputText;
-let displayText = "";
+let displayText = "Your name here";
 
 
 
