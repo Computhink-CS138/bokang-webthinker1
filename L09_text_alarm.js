@@ -60,8 +60,6 @@ let timer = 5;
 function setup() {
     
     createCanvas(600, 400);
-    
-
     intervalId = setInterval(updateCountdown, 1000);
     fill(255, 0, 0);
     textSize(40);
@@ -81,7 +79,6 @@ function updateCountdown() {
 
     if (timer <= 0) {
         clearInterval(intervalId);
-        text("booo", 300, 200);
     }
 }
 
