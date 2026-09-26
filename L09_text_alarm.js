@@ -21,34 +21,34 @@
 //     text(timeString, width / 2, height / 2);
 // }
 
-let intervalid;
+// let intervalid;
 
-let x = 0;
+// let x = 0;
 
-function setup() {
-    createCanvas(600, 400);
+// function setup() {
+//     createCanvas(600, 400);
 
-    // draw circle every 1000ms (1sec)
-    intervalid = setInterval(drawCircle, 100);
-}
+//     // draw circle every 1000ms (1sec)
+//     intervalid = setInterval(drawCircle, 100);
+// }
 
-function draw() {
+// function draw() {
 
-}
-
-
+// }
 
 
-function drawCircle() {
-    clear();
-    circle(x, 50, 20);
-    x += 10;
-    if (x > 200) {
-        x = 0;
-    }
-}
 
-function mousePressed() {
 
-    clearInterval(intervalid);
-}
+// function drawCircle() {
+//     clear();
+//     circle(x, 50, 20);
+//     x += 10;
+//     if (x > 200) {
+//         x = 0;
+//     }
+// }
+
+// function mousePressed() {
+
+//     clearInterval(intervalid);
+// }
