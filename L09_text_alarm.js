@@ -29,7 +29,7 @@ function setup() {
     createCanvas(600, 400);
 
     // draw circle every 1000ms (1sec)
-    intervalid = setInterval(drawCircle, 1000);
+    intervalid = setInterval(drawCircle, 100);
 }
 
 function draw() {
