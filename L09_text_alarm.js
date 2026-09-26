@@ -27,12 +27,12 @@ let x = 0;
 
 function setup() {
     createCanvas(600, 400);
-    
+
     // draw circle every 1000ms (1sec)
     intervalid = setInterval(drawCircle, 1000);
 }
 
-function draw() {
+function drawCircle() {
     clear();
     circle(x, 50, 20);
 
