@@ -65,7 +65,7 @@ function setup() {
 }
 
 function draw() {
-    text(timer, 300, 200);
+    text(timer, width / 2, height / 2);
 }
 
 
