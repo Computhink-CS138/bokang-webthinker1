@@ -89,7 +89,7 @@ function updateCountdown() {
 
     if (timer <= 0) {
         clearInterval(intervalId);
-        
+        countdownStart = false;
     }
 }
 
