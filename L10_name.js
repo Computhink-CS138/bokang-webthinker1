@@ -6,7 +6,7 @@ function setup() {
 
 
     inputText = createInput();
-    inputText.position
+    inputText.position(width / 2, height / 2);
 }
 
 function draw() {
