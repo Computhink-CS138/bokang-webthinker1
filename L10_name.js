@@ -8,9 +8,10 @@ function setup() {
     textAlign(CENTER, CENTER);
 
     inputText = createInput();
-    
+
     inputText.position(width / 2, height / 2);
-    let inputX = this.canvas.offsetLeft + (width / 2) - 80
+    let inputX = this.canvas.offsetLeft + (width / 2) - 80;
+    let inputY = 
 
     inputText.input(updateText);
 }
