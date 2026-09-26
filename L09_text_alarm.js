@@ -63,7 +63,8 @@ function setup() {
 
 function updateCountdown() {
     clear();
-    Text()
+    
+    
 }
 
 
