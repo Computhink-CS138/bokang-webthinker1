@@ -55,6 +55,8 @@
 
 let intervalId;
 
+let timer;
+
 function setup() {
     createCanvas(600, 400);
 
@@ -63,6 +65,7 @@ function setup() {
 
 function updateCountdown() {
     clear();
+    timer 
     
     
 }
