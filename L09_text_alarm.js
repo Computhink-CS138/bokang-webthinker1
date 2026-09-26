@@ -53,12 +53,12 @@
 //     clearInterval(intervalid);
 // }
 
-let intervalid;
+let intervalId;
 
 function setup() {
     createCanvas(600, 400);
 
-    intervalid = setInterval(text(), 100);
+    intervalId = setInterval(update, 100);
 }
 
 
