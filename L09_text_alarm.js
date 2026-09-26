@@ -61,7 +61,7 @@ function setup() {
     createCanvas(600, 400);
 
     intervalId = setInterval(updateCountdown, 1000);
-    test
+    testSize 
 }
 
 function draw() {
