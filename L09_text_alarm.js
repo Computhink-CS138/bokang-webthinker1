@@ -65,8 +65,8 @@ function setup() {
 
 function updateCountdown() {
     clear();
-    
-    timer 
+
+    timer -= 1 
     
     
 }
