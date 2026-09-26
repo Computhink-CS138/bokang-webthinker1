@@ -64,14 +64,13 @@ function setup() {
 }
 
 function draw() {
-    Text()
+    Text(timer, 300, 200);
 }
 
 
 
 function updateCountdown() {
     clear();
-
     timer -= 1 
     
     
