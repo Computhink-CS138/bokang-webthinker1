@@ -20,7 +20,7 @@ function setup() {
 function draw() {
     background(0);
 
-    text(displayText, width / 2, height / 2);
+    text(displayText, width / 2, height * 0.3);
 }
 
 function updateText() {
