@@ -55,6 +55,8 @@
 
 let intervalId;
 
+let count
+
 let timer = 5;
 
 function setup() {
@@ -71,7 +73,7 @@ function draw() {
 }
 
 function mousePressed() {
-    
+
     intervalId = setInterval(updateCountdown, 1000);
 }
 
