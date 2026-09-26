@@ -58,7 +58,7 @@ let intervalid;
 function setup() {
     createCanvas(600, 400);
 
-    // draw circle every 1000ms (1sec)
+    
 }
 
 
