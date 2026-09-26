@@ -31,7 +31,8 @@ function setup() {
 }
 
 function draw() {
-    clear()
+    clear();
+    circle(x);
 
 }
 
