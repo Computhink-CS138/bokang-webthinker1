@@ -55,7 +55,7 @@
 
 let intervalId;
 
-let count
+let countdownStart = false;
 
 let timer = 5;
 
