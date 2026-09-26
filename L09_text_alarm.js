@@ -64,7 +64,7 @@ function setup() {
 }
 
 function draw() {
-    Text(timer, 300, 200);
+    text(timer, 300, 200);
 }
 
 
