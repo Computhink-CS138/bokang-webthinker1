@@ -68,7 +68,7 @@ function setup() {
 }
 
 function draw() {
-    background("black")
+    background("black");
     text(timer, width / 2, height / 2);
 }
 
