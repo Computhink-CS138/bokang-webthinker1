@@ -20,7 +20,7 @@
 
 //     text(timeString, width / 2, height / 2);
 // }
-
+///////////////////////////////////////////////////////////////////////////
 // let intervalid;
 
 // let x = 0;
@@ -53,7 +53,9 @@
 //     clearInterval(intervalid);
 // }
 
-let 
+let intervalid;
+
+
 
 
 
