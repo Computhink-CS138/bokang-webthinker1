@@ -75,7 +75,7 @@ function updateCountdown() {
 
 
     if (timer <= 0) {
-        clearInterval(intervalid);
+        clearInterval(Intervalid);
     }
 }
 
