@@ -32,6 +32,13 @@ function setup() {
     intervalid = setInterval(drawCircle, 1000);
 }
 
+function draw() {
+    
+}
+
+
+
+
 function drawCircle() {
     clear();
     circle(x, 50, 20);
