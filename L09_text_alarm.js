@@ -59,7 +59,7 @@ let timer = 5;
 
 function setup() {
     createCanvas(600, 400);
-    fill("red")
+    fill("black")
 
     intervalId = setInterval(updateCountdown, 1000);
     fill(255, 0, 0);
