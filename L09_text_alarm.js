@@ -61,7 +61,9 @@ function setup() {
     intervalId = setInterval(updateCountdown, 1000);
 }
 
-
+function updateCountdown() {
+    
+}
 
 
 
