@@ -32,7 +32,7 @@ function setup() {
 
 function draw() {
     clear();
-    circle(x);
+    circle(x, 50, 20);
 
 }
 
