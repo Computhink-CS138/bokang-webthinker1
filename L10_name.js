@@ -9,7 +9,7 @@ function setup() {
 
     inputText = createInput();
     
-    
+
     inputText.position(width / 2, height / 2);
     let inputX = this.canvas.offsetLeft + (width / 2) - 80;
     let inputY = this.canvas.offsetTop + (height / 2) - 10;
@@ -17,7 +17,7 @@ function setup() {
 
     inputText.input(updateText);
 
-    colourPicker = createColorPicker();
+    colourPicker = createColorPicker(colour(255, 0));
     let colourX = this.canvas.offsetLeft + (width / 2) - 20;
     let colourY = this.canvas.offsetTop + (height * 0.7);
     colourPicker.position(colourX, colourY);
