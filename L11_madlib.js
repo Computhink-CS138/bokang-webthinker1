@@ -51,7 +51,7 @@ function generateStory() {
     let verb = verbfield.value();
     let adjetive = adjfield.value();
     let adverb = acvfield.value();
-    let place = verbfield.value();
+    let place = placefield.value();
 }
 
 
