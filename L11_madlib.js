@@ -28,7 +28,7 @@ function setup() {
 
     submitButton = createButton("Generate Story");
     submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY + 250);
-    submitButton.mousePressed(butto)
+    submitButton.mousePressed(buttonExample);
 
 }
 
@@ -41,3 +41,5 @@ function draw() {
     text("Enter a adverb:", width * 0.2, height * 0.2 + 150);
     text("Enter a place:", width * 0.2, height * 0.2 + 200);
 }
+
+function 
