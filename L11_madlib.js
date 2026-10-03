@@ -4,8 +4,8 @@ let adjfield;
 let acvfield;
 let placefield;
 
-    let offsetX = this.canvas.offsetLeft;
-    let offsetY = this.canvas.offsetTop;
+let offsetX = this.canvas.offsetLeft;
+let offsetY = this.canvas.offsetTop;
 function setup() {
     createCanvas(600, 400);
 
