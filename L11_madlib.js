@@ -55,8 +55,8 @@ function generateStory() {
 
     console.log(noun);
     console.log(verb);
-    console.log(noun);
-    console.log(noun);
+    console.log(adjetive);
+    console.log();
     console.log(noun);
 
 }
