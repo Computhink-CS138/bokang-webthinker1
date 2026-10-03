@@ -47,7 +47,7 @@ function buttonExample() {
 }
 
 function generateStory() {
-    
+    let noun = nounfield.
 }
 
 
