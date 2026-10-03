@@ -14,8 +14,8 @@ function setup() {
     nounfield = createInput();
     verbfield = createInput();
     adjfield = createInput();
-    nounfield = createInput();
-    nounfield = createInput();
+    acvfield = createInput();
+    placefield = createInput();
     nounfield = createInput();
     nounfield = createInput();
     nounfield = createInput();
