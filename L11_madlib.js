@@ -1,7 +1,7 @@
 let nounfield;
 let verbfield;
-let adj
-
+let adjfield;
+let acv
 
 
 function setup() {
