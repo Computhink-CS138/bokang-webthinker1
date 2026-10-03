@@ -1,8 +1,9 @@
 let nounfield;
 let verbfield;
 let adjfield;
-let acv
-
+let acvfield;
+let placefield;
+let gener
 
 function setup() {
     createCanvas(600, 400);
