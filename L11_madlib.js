@@ -1,5 +1,6 @@
 let nounfield;
-let 
+let verbfield;
+let adj
 
 
 
