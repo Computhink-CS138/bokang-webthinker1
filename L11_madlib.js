@@ -47,7 +47,7 @@ function draw() {
 function generateStory() {
     let noun = nounfield.value();
     let verb = verbfield.value();
-    let adjetive = adjfield.value();
+    let adjective = adjfield.value();
     let adverb = acvfield.value();
     let place = placefield.value();
 
