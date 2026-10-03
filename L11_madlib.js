@@ -43,5 +43,15 @@ function draw() {
 }
 
 function buttonExample() {
-    console.log("")
+    console.log("Button clicked!");
 }
+
+function generateStory() {
+    
+}
+
+
+
+
+
+
