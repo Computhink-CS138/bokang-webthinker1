@@ -10,6 +10,8 @@ function setup() {
     fill(255, 255, 0);
     textSize(40);
     textAlign(CENTER, CENTER);
+    
+    inputText = createInput();
 }
 
 function draw() {
