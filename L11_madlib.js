@@ -49,7 +49,8 @@ function buttonExample() {
 function generateStory() {
     let noun = nounfield.value();
     let verb = verbfield.value();
-    let ad = verbfield.value();
+    let adjetive = adjfield.value();
+    let adverb = verbfield.value();
 }
 
 
