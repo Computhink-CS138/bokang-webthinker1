@@ -23,8 +23,8 @@ function setup() {
     nounfield.position(width / 2 + offsetX, height * 0.2 + offsetY);
     verbfield.position(width / 2 + offsetX, height * 0.2 + 50 + offsetY);
     adjfield.position(width / 2 + offsetX, height * 0.2 + 100 + offsetY);
-    acvfield.position(width / 2 + offsetX, height * 0.2 + 150);
-    placefield.position(width / 2 + offsetX, height * 0.2 + 200);
+    acvfield.position(width / 2 + offsetX, height * 0.2 + 150 + offsetY);
+    placefield.position(width / 2 + offsetX, height * 0.2 + 200 + offsetY);
 
 }
 
