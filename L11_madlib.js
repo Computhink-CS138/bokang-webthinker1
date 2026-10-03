@@ -55,9 +55,7 @@ function generateStory() {
 
     let story = "A ${noun} is ${verb}ing."; 
 
-    console.log("");
-
-
+    console.log(story);
 }
 
 
