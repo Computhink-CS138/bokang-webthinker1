@@ -26,7 +26,7 @@ function setup() {
     acvfield.position(width / 2 + offsetX, height * 0.2 + 150 + offsetY);
     placefield.position(width / 2 + offsetX, height * 0.2 + 200 + offsetY);
 
-    submitButton = createButton("G")
+    submitButton = createButton("Generate Story");
 
 }
 
