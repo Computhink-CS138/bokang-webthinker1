@@ -25,8 +25,8 @@ function setup() {
     adjfield.position(width / 2, height * 0.2 + offsetY + 100);
     acvfield.position(width / 2, height * 0.2 + offsetY + 150);
     placefield.position(width / 2, height * 0.2 + offsetY + 200);
-    
 
+    text("Enter a noun")
 }
 
 function draw() {
