@@ -12,8 +12,8 @@ function setup() {
     textAlign(CENTER, CENTER);
 
     nounfield = createInput();
-    verbfieldfield = createInput();
-    nounfield = createInput();
+    verbfield = createInput();
+    adjfield = createInput();
     nounfield = createInput();
     nounfield = createInput();
     nounfield = createInput();
