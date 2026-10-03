@@ -53,7 +53,7 @@ function generateStory() {
     let adverb = acvfield.value();
     let place = placefield.value();
 
-    let 
+    let story = "A $"
 
     console.log("");
 
