@@ -57,7 +57,7 @@ function generateStory() {
     console.log(verb);
     console.log(adjetive);
     console.log(adverb);
-    console.log(noun);
+    console.log(place);
 
 }
 
