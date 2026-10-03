@@ -26,14 +26,14 @@ function setup() {
     acvfield.position(width / 2 + offsetX, height * 0.2 + offsetY + 150);
     placefield.position(width / 2 + offsetX, height * 0.2 + offsetY + 200);
 
+}
+
+function draw() {
+    background(100);
+
     text("Enter a noun:", width * 0.2, height * 0.2 + offsetY);
     text("Enter a verb:", width * 0.2,height * 0.2 + offsetY);
     text("Enter an adjetive:", width * 0.2,height * 0.2 + offsetY);
     text("Enter a adverb:", width * 0.2,height * 0.2 + offsetY);
     text("Enter a place:", width * 0.2,height * 0.2 + offsetY);
-
-}
-
-function draw() {
-    background(100);
 }
