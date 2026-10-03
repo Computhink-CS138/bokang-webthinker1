@@ -16,14 +16,6 @@ function setup() {
     adjfield = createInput();
     acvfield = createInput();
     placefield = createInput();
-    nounfield = createInput();
-    nounfield = createInput();
-    nounfield = createInput();
-
-
-
-
-
 
     inputText.position(width / 2, height / 2);
     let inputX = this.canvas.offsetLeft + (width / 2) - 80;
