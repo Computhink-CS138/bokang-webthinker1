@@ -12,13 +12,19 @@ function setup() {
     textAlign(CENTER, CENTER);
 
     nounfield = createInput();
+    verbfieldfield = createInput();
+    nounfield = createInput();
+    nounfield = createInput();
+    nounfield = createInput();
+    nounfield = createInput();
+    nounfield = createInput();
+    nounfield = createInput();
 
 
 
 
 
 
-    
     inputText.position(width / 2, height / 2);
     let inputX = this.canvas.offsetLeft + (width / 2) - 80;
     let inputY = this.canvas.offsetTop + (height / 2) - 10;
