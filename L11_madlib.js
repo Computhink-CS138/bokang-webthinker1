@@ -51,7 +51,7 @@ function generateStory() {
     let adverb = acvfield.value();
     let place = placefield.value();
 
-    let story = "The ${adjective} ${noun} decided to ${adverb} at the ${place}."; 
+    let story = 'The ${adjective} ${noun} decided to ${adverb} at the ${place}.'; 
 
     console.log(story);
 }
