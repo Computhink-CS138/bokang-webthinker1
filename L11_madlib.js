@@ -17,7 +17,7 @@ function setup() {
     acvfield = createInput();
     placefield = createInput();
 
-    let offset
+    let offsetX = this.canvas
 
     inputText.position(width / 2, height / 2);
     let inputX = this.canvas.offsetLeft + (width / 2) - 80;
