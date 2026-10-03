@@ -26,7 +26,7 @@ function setup() {
     acvfield.position(width / 2 + offsetX, height * 0.2 + offsetY + 150);
     placefield.position(width / 2 + offsetX, height * 0.2 + offsetY + 200);
 
-    text("Enter a noun")
+    text("Enter a noun:", )
 }
 
 function draw() {
