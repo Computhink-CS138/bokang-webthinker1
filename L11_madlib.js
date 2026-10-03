@@ -22,16 +22,16 @@ function setup() {
     nounfield.position(width / 2 + offsetX, height * 0.2);
     verbfield.position(width / 2 + offsetX, height * 0.2 + 50);
     adjfield.position(width / 2 + offsetX, height * 0.2 + 100);
-    acvfield.position(width / 2 + offsetX, height * 0.2 + offsetY + 150);
-    placefield.position(width / 2 + offsetX, height * 0.2 + offsetY + 200);
+    acvfield.position(width / 2 + offsetX, height * 0.2 + 150);
+    placefield.position(width / 2 + offsetX, height * 0.2 + 200);
 
 }
 
 function draw() {
     background(100);
 
-    text("Enter a noun:", width * 0.2, height * 0.2 + offsetY);
-    text("Enter a verb:", width * 0.2,height * 0.2 + offsetY);
+    text("Enter a noun:", width * 0.2, height * 0.2);
+    text("Enter a verb:", width * 0.2,height * 0.2 + 50);
     text("Enter an adjetive:", width * 0.2,height * 0.2 + offsetY);
     text("Enter a adverb:", width * 0.2,height * 0.2 + offsetY);
     text("Enter a place:", width * 0.2,height * 0.2 + offsetY);
