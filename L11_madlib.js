@@ -47,7 +47,8 @@ function buttonExample() {
 }
 
 function generateStory() {
-    let noun = nounfield.
+    let noun = nounfield.value();
+    let verb = verbfield.value();
 }
 
 
