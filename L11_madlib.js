@@ -3,7 +3,6 @@ let verbfield;
 let adjfield;
 let acvfield;
 let placefield;
-let gener
 
 function setup() {
     createCanvas(600, 400);
