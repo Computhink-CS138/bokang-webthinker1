@@ -4,8 +4,6 @@ let adjfield;
 let acvfield;
 let placefield;
 
-let offsetX = this.canvas.offsetLeft;
-let offsetY = this.canvas.offsetTop;
 function setup() {
     createCanvas(600, 400);
 
@@ -18,6 +16,9 @@ function setup() {
     adjfield = createInput();
     acvfield = createInput();
     placefield = createInput();
+
+    let offsetX = this.canvas.offsetLeft;
+let offsetY = this.canvas.offsetTop;
 
     nounfield.position(width / 2 + offsetX, height * 0.2);
     verbfield.position(width / 2 + offsetX, height * 0.2 + 50);
