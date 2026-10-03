@@ -30,7 +30,7 @@ function setup() {
     text("Enter a verb:", width * 0.2,height * 0.2 + offsetY);
     text("Enter an adjetive:", width * 0.2,height * 0.2 + offsetY);
     text("Enter a adverb:", width * 0.2,height * 0.2 + offsetY);
-    text("Enter a place:", ,height * 0.2 + offsetY);
+    text("Enter a place:", width * 0.2,height * 0.2 + offsetY);
 
 }
 
