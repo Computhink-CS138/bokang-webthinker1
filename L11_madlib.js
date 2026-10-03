@@ -10,8 +10,11 @@ function setup() {
     fill(255, 255, 0);
     textSize(40);
     textAlign(CENTER, CENTER);
-    
+
     inputText = createInput();
+    inputText.position(width / 2, height / 2);
+    let inputX = this.canvas.offsetLeft + (width / 2) - 80;
+    let inputY = this.canvas.offsetTop + (height / 2) - 10;
 }
 
 function draw() {
