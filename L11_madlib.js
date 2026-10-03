@@ -27,7 +27,7 @@ function setup() {
     placefield.position(width / 2 + offsetX, height * 0.2 + 200 + offsetY);
 
     submitButton = createButton("Generate Story");
-    submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY)
+    submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY + 250)
 
 }
 
