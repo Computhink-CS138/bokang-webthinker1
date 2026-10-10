@@ -23,5 +23,6 @@ function draw() {
 }
 
 function submitGuess() {
-
+    fill(0);
+    
 }
