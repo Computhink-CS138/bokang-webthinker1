@@ -14,7 +14,7 @@ function setup() {
     textSize(40);
     textAlign(CENTER, CENTER);
 
-    nounfield.position(width / 2 + offsetX, height * 0.2 + offsetY);
+
     
     submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY + 250);
