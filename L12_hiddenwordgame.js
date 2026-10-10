@@ -4,7 +4,9 @@ let placeField;
 
 function setup() {
     createCanvas(600, 400);
-    background(0);
+    background(100);
+
+    
     let offsetX = this.canvas.offsetLeft;
     let offsetY = this.canvas.offsetTop;
     textField = createInput();
