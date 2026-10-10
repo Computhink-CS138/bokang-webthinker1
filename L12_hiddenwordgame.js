@@ -14,7 +14,7 @@ function setup() {
 
     textField = createInput();
     textField.position(width / 2 + offsetX - 80, height / 2 + offsetY);
-    textField
+    textField.size
     
     submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX + 100, height / 2 + offsetY);
