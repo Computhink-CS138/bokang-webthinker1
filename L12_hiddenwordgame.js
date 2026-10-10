@@ -13,8 +13,6 @@ function setup() {
     fill(255, 255, 0);
     textSize(40);
     textAlign(CENTER, CENTER);
-
-
     
     submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY + 250);
