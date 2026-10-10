@@ -17,7 +17,7 @@ function setup() {
 
     nounfield.position(width / 2 + offsetX, height * 0.2 + offsetY);
     
-    submitButton = createButton("Generate Story");
+    submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY + 250);
     submitButton.mousePressed(generateStory);
 }
