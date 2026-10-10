@@ -32,7 +32,8 @@ function setup() {
     randomWord = random(wordArray);
     displayHint = randomWord[0].toUpperCase() + " " + "_".repeat(randomWord.length);
     fill(0);
-    textSize
+    textSize(28);
+    textAlign(C)
 }
 
 function draw() {
