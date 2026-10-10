@@ -52,8 +52,8 @@ function submitGuess() {
 }
 
 function correctGuess(guess, word) {
-    let correct
+    let correctLetters = "";
     for (let i = 0; i < word.length; i++) {
-
+        
     }
 }
