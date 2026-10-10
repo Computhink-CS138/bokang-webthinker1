@@ -2,7 +2,6 @@ let textField;
 let placeField;
 
 
-
 function setup() {
     createCanvas(600, 400);
     background(0);
