@@ -2,7 +2,7 @@ let textField;
 let placeField;
 let submitButton;
 
-let wordArray = ["banana", ""]
+let wordArray = ["banana", "potato", "apple", ]
 
 
 function setup() {
