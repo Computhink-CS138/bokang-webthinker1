@@ -51,6 +51,6 @@ function submitGuess() {
     text(inputText, width / 2, height / 3);
 }
 
-function correctGuess(word, word) {
+function correctGuess(guess, word) {
 
 }
