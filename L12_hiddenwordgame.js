@@ -35,7 +35,7 @@ function setup() {
     textSize(28);
     textAlign(CENTER, CENTER);
 
-    text("Hint: " + displayHint, width / 2, height )
+    text("Hint: " + displayHint, width / 2, height * 0.4);
 }
 
 function draw() {
