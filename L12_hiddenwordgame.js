@@ -4,6 +4,7 @@ let submitButton;
 
 let wordArray = ["banana", "potato", "apple", "orange"];
 let randomWord;
+let displayHint;
 
 
 function setup() {
