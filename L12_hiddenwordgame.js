@@ -23,7 +23,7 @@ function draw() {
 }
 
 function submitGuess() {
-    let inputText
+    let inputText = textField.value();
     fill(0);
     textSize(28);
     text(inputText, width / 2, height / 3);
