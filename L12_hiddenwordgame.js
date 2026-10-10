@@ -50,3 +50,7 @@ function submitGuess() {
     textSize(28);
     text(inputText, width / 2, height / 3);
 }
+
+function correctGuess() {
+    
+}
