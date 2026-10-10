@@ -24,5 +24,6 @@ function draw() {
 
 function submitGuess() {
     fill(0);
-    
+    textSize(28);
+    text
 }
