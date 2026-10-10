@@ -55,7 +55,7 @@ function correctGuess(guess, word) {
     let correctLetters = "";
     for (let i = 0; i < word.length; i++) {
         if (word.includes(guess[i]) && !correctLetters.includes(guess[i])) {
-            correctLetters += guess[i]
+            correctLetters += guess[i];
         }
     }
 }
