@@ -1,5 +1,8 @@
 let textField;
 let placeField;
+let submitButton;
+
+let word 
 
 
 function setup() {
