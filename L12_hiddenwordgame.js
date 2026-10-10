@@ -3,6 +3,7 @@ let placeField;
 let submitButton;
 
 let wordArray = ["banana", "potato", "apple", "orange"];
+let randomWord;
 
 
 function setup() {
