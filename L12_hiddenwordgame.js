@@ -10,8 +10,11 @@ function setup() {
     let offsetX = this.canvas.offsetLeft;
     let offsetY = this.canvas.offsetTop;
 
+
+
     textField = createInput();
     textField.position(width / 2 + offsetX - 80, height / 2 + offsetY);
+    textField
     
     submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX + 100, height / 2 + offsetY);
@@ -24,7 +27,7 @@ function draw() {
 
 function submitGuess() {
     let inputText = textField.value();
-    
+
     fill(0);
     textSize(28);
     text(inputText, width / 2, height / 3);
