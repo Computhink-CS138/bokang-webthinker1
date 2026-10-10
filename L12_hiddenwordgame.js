@@ -6,7 +6,7 @@ function setup() {
     createCanvas(600, 400);
     background();
     textFeild = createInput();
-    placeFeild.position(width / 2, height / 2);
+    placeFeild.position(width / 2 + offsetX, height / 2 + offsetX);
 
     fill(255, 255, 0);
     textSize(40);
