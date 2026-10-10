@@ -16,7 +16,8 @@ function setup() {
     textField.position(width / 2 + offsetX - 80, height / 2 + offsetY);
     textField.size(150, 30);
     textField.style("background-color", "lightblue");
-    textField/style("font-size", "20")
+    textField/style("font-size", "20px");
+    testF
     
     submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX + 100, height / 2 + offsetY);
