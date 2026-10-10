@@ -1,5 +1,5 @@
-let textFeild;
-let placefield
+let textField;
+let placeField
 
 
 
@@ -8,7 +8,7 @@ function setup() {
     background(0);
     let offsetX = this.canvas.offsetLeft;
     let offsetY = this.canvas.offsetTop;
-    textFeild = createInput();
+    textField = createInput();
     placeFeild.position(width / 2 + offsetX, height / 2 + offsetX);
 
     fill(255, 255, 0);
