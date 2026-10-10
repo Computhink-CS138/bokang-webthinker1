@@ -4,7 +4,7 @@ let nounfield;
 
 function setup() {
     createCanvas(600, 400);
-    background();
+    background(0);
     let offsetX = this.canvas.offsetLeft;
     let offsetY = this.canvas.offsetTop;
     textFeild = createInput();
