@@ -9,7 +9,7 @@ function setup() {
     let offsetX = this.canvas.offsetLeft;
     let offsetY = this.canvas.offsetTop;
     textField = createInput();
-    placeFeild.position(width / 2 + offsetX, height / 2 + offsetX);
+    placeField.position(width / 2 + offsetX, height / 2 + offsetX);
 
     fill(255, 255, 0);
     textSize(40);
