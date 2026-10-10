@@ -14,7 +14,7 @@ function setup() {
     placeField.position(width / 2 + offsetX - 80, height / 2 + offsetX);
     
     submitButton = createButton("Guess");
-    submitButton.position(width / 2 + offsetX, height * 0.2 + offsetY + 250);
+    submitButton.position(width / 2 + offsetX + 100, height /2  + offsetY + 250);
 }
 
 function draw() {
