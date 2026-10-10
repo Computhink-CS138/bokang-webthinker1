@@ -30,7 +30,7 @@ function setup() {
     submitButton.mousePressed(submitGuess);
 
     randomWord = random(wordArray);
-    displayH
+    displayHint = randomWord[0]
 }
 
 function draw() {
