@@ -15,7 +15,7 @@ function setup() {
     
     submitButton = createButton("Guess");
     submitButton.position(width / 2 + offsetX + 100, height / 2 + offsetY);
-    submitButton.mousePressed(generateStory);
+    submitButton.mousePressed(submitGuess);
 }
 
 function draw() {
@@ -23,5 +23,5 @@ function draw() {
 }
 
 function submitGuess() {
-    
+
 }
