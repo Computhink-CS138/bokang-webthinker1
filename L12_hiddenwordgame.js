@@ -49,7 +49,7 @@ function submitGuess() {
     fill(0);
     textSize(28);
     text(inputText, width / 2, height / 3);
-    let letters = correctGuess(input)
+    let letters = correctGuess(inputText, randomWord);
 }
 
 function correctGuess(guess, word) {
