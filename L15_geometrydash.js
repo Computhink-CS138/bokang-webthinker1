@@ -18,7 +18,7 @@ function draw() {
     if (playerY >= height - playerSize) {
         playerY = height - playerSize;
     } else {
-        isGrounded = 
+        isGrounded = false;
     }
 
     fill(255, 255, 0);
