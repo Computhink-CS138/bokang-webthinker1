@@ -1,2 +1,3 @@
 let playerX = 100;
-let pla
+let playerY;
+let playerSize;
