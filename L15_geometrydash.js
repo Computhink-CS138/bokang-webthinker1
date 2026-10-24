@@ -6,5 +6,5 @@ let isGrounded = false;
 
 function setup() {
     createCanvas;
-    textAlign()
+    textAlign(CENTER)
 }
