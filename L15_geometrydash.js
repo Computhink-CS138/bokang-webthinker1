@@ -1,1 +1,2 @@
-// write your codes here
+let playerX = 100;
+let pla
