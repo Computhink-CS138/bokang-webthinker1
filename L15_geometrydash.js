@@ -15,7 +15,9 @@ function draw() {
 
     velocity += 0.8;
     playerY += velocity;
-    if (pla)
+    if (playerY >= height - playerSize) {
+        
+    }
 
     fill(255, 255, 0);
 
