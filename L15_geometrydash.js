@@ -25,7 +25,7 @@ function draw() {
     background(0);
 
     if (!gameOver) {
-            velocity += 0.8;
+        velocity += 0.8;
         playerY += velocity;
         if (playerY >= height - playerSize) {
             playerY = height - playerSize;
@@ -49,10 +49,12 @@ function draw() {
 
             triangle(spikesX[i], height, spikesX[i] + spikeWidth / 2, height - spikeHeight, spikesX[i] + spikeWidth, height);
         }
+    } else {
+        fill(255, 0, 0);
+        textSize(40);
+        text("Game Over!", width / 2, height / 2);
     }
-
 }
-
 
 
 function keyPressed() {
