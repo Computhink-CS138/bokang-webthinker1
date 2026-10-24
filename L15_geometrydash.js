@@ -6,6 +6,7 @@ let isGrounded = false;
 
 let spikesX = [];
 let spikeWidth = 20;
+let spikeHeight = 30;
 let 
 
 function setup() {
