@@ -40,7 +40,9 @@ function draw() {
     for (let i = 0; i < spikesX.length; i++) {
         spikesX[i] -= spikeSpeed;
 
-        if (spikesX[i] < -spikeWidth)
+        if (spikesX[i] < -spikeWidth) {
+            spikesX[i ]
+        }
     }
 }
 
