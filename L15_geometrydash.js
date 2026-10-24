@@ -25,10 +25,7 @@ function draw() {
     background(0);
 
     if (!gameOver) {
-        
-    }
-
-    velocity += 0.8;
+            velocity += 0.8;
     playerY += velocity;
     if (playerY >= height - playerSize) {
         playerY = height - playerSize;
@@ -53,6 +50,10 @@ function draw() {
         triangle(spikesX[i], height, spikesX[i] + spikeWidth / 2, height - spikeHeight, spikesX[i] + spikeWidth, height);
     }
 }
+
+    }
+
+
 
 function keyPressed() {
     if (key === " " && isGrounded === true) {
