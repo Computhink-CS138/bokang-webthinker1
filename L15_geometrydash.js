@@ -28,3 +28,6 @@ function draw() {
     rect(playerX, playerY, playerSize, playerSize);
 }
 
+function keyPressed() {
+    
+}
