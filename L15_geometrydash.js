@@ -35,15 +35,15 @@ function draw() {
             isGrounded = false;
         }
 
-    fill(255, 255, 0);
+        fill(255, 255, 0);
 
-    rect(playerX, playerY, playerSize, playerSize);
+        rect(playerX, playerY, playerSize, playerSize);
 
-    fill(255, 0, 0);
-    for (let i = 0; i < spikesX.length; i++) {
-        spikesX[i] -= spikeSpeed;
+        fill(255, 0, 0);
+        for (let i = 0; i < spikesX.length; i++) {
+            spikesX[i] -= spikeSpeed;
 
-        if (spikesX[i] < -spikeWidth) {
+            if (spikesX[i] < -spikeWidth) {
             spikesX[i] = width + random(100, 300);
         }
 
