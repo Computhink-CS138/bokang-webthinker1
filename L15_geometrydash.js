@@ -24,7 +24,7 @@ function setup() {
 function draw() {
     background(0);
 
-    
+    if (!)
 
     velocity += 0.8;
     playerY += velocity;
