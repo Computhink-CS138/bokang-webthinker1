@@ -5,5 +5,6 @@ let velocity = 0;
 let isGrounded = false;
 
 function setup() {
-    
+    createCanvas;
+    textAlign()
 }
