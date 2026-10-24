@@ -9,7 +9,7 @@ let spikeWidth = 20;
 let spikeHeight = 30;
 let spikeSpeed = 5;
 
-let gamemode = false;
+let gameOver = false;
 
 function setup() {
     createCanvas(600, 400);
@@ -24,7 +24,7 @@ function setup() {
 function draw() {
     background(0);
 
-    if (!)
+    if (!gameOver)
 
     velocity += 0.8;
     playerY += velocity;
