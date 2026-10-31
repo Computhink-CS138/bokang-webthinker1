@@ -3,8 +3,8 @@ let GRID_COLUMNS = 18;
 let GRID_ROWS = 12;
 const GRID_LEFT = 48;
 const GRID_TOP = 112;
-let CANVAS_WIDTH = 960;
-let CANVAS_HEIGHT = 720;
+const CANVAS_WIDTH = 960;
+const CANVAS_HEIGHT = 720;
 const INTERACTION_RANGE = 42;
 const PLAYER_SPEED = 3;
 const BASE_MONSTER_SPEED = 1.7;
@@ -101,9 +101,6 @@ function configureStage(nextStage) {
   stage = nextStage;
   GRID_COLUMNS = 18 + (stage - 1) * 2;
   GRID_ROWS = 12 + (stage - 1) * 2;
-  CANVAS_WIDTH = GRID_LEFT * 2 + GRID_COLUMNS * TILE_SIZE;
-  CANVAS_HEIGHT = GRID_TOP + GRID_ROWS * TILE_SIZE + 32;
-  resizeCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
   monsterSpeed = BASE_MONSTER_SPEED + (stage - 1) * MONSTER_SPEED_STEP;
 
   walls = new Group();
@@ -173,17 +170,41 @@ function draw() {
 
   if (gameMode === "playing") {
     updateGame();
+    updateCamera();
+    camera.on();
     drawDungeonFloor();
     drawCoalPiles();
     drawMachines();
     drawExit();
     drawCarriedCoal();
     drawMonsterFace();
+    camera.off();
     drawHud();
     drawStatusMessage();
+    camera.on();
   } else {
+    camera.off();
     drawTitleOrEndScreen();
+    camera.on();
   }
+}
+
+function updateCamera() {
+  const mapWidth = GRID_COLUMNS * TILE_SIZE;
+  const mapHeight = GRID_ROWS * TILE_SIZE;
+  const minCameraX = GRID_LEFT + CANVAS_WIDTH / 2;
+  const maxCameraX = GRID_LEFT + mapWidth - CANVAS_WIDTH / 2;
+  const minCameraY = GRID_TOP + CANVAS_HEIGHT / 2;
+  const maxCameraY = GRID_TOP + mapHeight - CANVAS_HEIGHT / 2;
+  const targetX = minCameraX > maxCameraX
+    ? GRID_LEFT + mapWidth / 2
+    : constrain(player.x, minCameraX, maxCameraX);
+  const targetY = minCameraY > maxCameraY
+    ? GRID_TOP + mapHeight / 2
+    : constrain(player.y, minCameraY, maxCameraY);
+
+  camera.x = lerp(camera.x, targetX, 0.12);
+  camera.y = lerp(camera.y, targetY, 0.12);
 }
 
 function updateGame() {
