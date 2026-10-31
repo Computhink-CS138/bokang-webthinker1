@@ -206,7 +206,10 @@ function updateGame() {
   player.collides(walls);
   updateMonster();
 
-  if (dist(player.x, player.y, monster.x, monster.y) < 25) {
+  const touchingMonster =
+    Math.abs(player.x - monster.x) <= (player.w + monster.w) / 2 &&
+    Math.abs(player.y - monster.y) <= (player.h + monster.h) / 2;
+  if (touchingMonster) {
     lossReason = "monster";
     gameMode = "lost";
     setDungeonVisible(false);
