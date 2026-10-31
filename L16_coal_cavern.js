@@ -7,9 +7,12 @@ const CANVAS_WIDTH = 960;
 const CANVAS_HEIGHT = 720;
 const INTERACTION_RANGE = 42;
 const PLAYER_SPEED = 3;
+const MONSTER_SPEED = 1.7;
+const MONSTER_REPATH_INTERVAL = 300;
 const WARMTH_LOSS_PER_SECOND = 0.34;
 
 let player;
+let monster;
 let walls;
 let wallSprites = [];
 let coalPiles = [];
@@ -21,6 +24,11 @@ let carryingCoal = false;
 let statusMessage = "";
 let statusMessageUntil = 0;
 let lastActionAt = 0;
+let monsterPath = [];
+let monsterPathIndex = 0;
+let monsterGoalKey = "";
+let lastMonsterPathAt = 0;
+let lossReason = "cold";
 
 function setup() {
   new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -49,6 +57,13 @@ function setup() {
   player.rotationLock = true;
   player.friction = 0;
   player.bounciness = 0;
+
+  monster = new Sprite(tileCenterX(15), tileCenterY(9), 30, 30);
+  monster.color = "#a2484d";
+  monster.stroke = "#ed9b73";
+  monster.rotationLock = true;
+  monster.friction = 0;
+  monster.bounciness = 0;
   resetRun();
 }
 
@@ -91,6 +106,7 @@ function resetRun() {
   exitPoint = { x: 16, y: 2 };
   warmth = 100;
   carryingCoal = false;
+  lossReason = "cold";
   gameMode = "title";
   statusMessage = "";
   statusMessageUntil = 0;
@@ -98,11 +114,20 @@ function resetRun() {
   player.y = tileCenterY(2);
   player.vel.x = 0;
   player.vel.y = 0;
+  monster.x = tileCenterX(15);
+  monster.y = tileCenterY(9);
+  monster.vel.x = 0;
+  monster.vel.y = 0;
+  monsterPath = [];
+  monsterPathIndex = 0;
+  monsterGoalKey = "";
+  lastMonsterPathAt = 0;
   setDungeonVisible(false);
 }
 
 function setDungeonVisible(visible) {
   player.visible = visible;
+  monster.visible = visible;
   walls.forEach((wall) => {
     wall.visible = visible;
   });
@@ -118,6 +143,7 @@ function draw() {
     drawMachines();
     drawExit();
     drawCarriedCoal();
+    drawMonsterFace();
     drawHud();
     drawStatusMessage();
   } else {
@@ -143,8 +169,17 @@ function updateGame() {
   player.vel.x = moveX * PLAYER_SPEED;
   player.vel.y = moveY * PLAYER_SPEED;
   player.collides(walls);
+  updateMonster();
+
+  if (dist(player.x, player.y, monster.x, monster.y) < 25) {
+    lossReason = "monster";
+    gameMode = "lost";
+    setDungeonVisible(false);
+    return;
+  }
 
   if (warmth <= 0) {
+    lossReason = "cold";
     gameMode = "lost";
     setDungeonVisible(false);
     return;
@@ -154,6 +189,90 @@ function updateGame() {
     gameMode = "won";
     setDungeonVisible(false);
   }
+}
+
+function updateMonster() {
+  const playerCell = worldToCell(player.x, player.y);
+  const goalKey = `${playerCell.x},${playerCell.y}`;
+  const currentTime = millis();
+
+  if (
+    currentTime - lastMonsterPathAt >= MONSTER_REPATH_INTERVAL ||
+    goalKey !== monsterGoalKey ||
+    monsterPath.length === 0
+  ) {
+    const monsterCell = worldToCell(monster.x, monster.y);
+    monsterPath = findDungeonPath(monsterCell, playerCell);
+    monsterPathIndex = monsterPath.length > 1 ? 1 : 0;
+    monsterGoalKey = goalKey;
+    lastMonsterPathAt = currentTime;
+  }
+
+  while (monsterPathIndex < monsterPath.length) {
+    const nextCell = monsterPath[monsterPathIndex];
+    const targetX = tileCenterX(nextCell.x);
+    const targetY = tileCenterY(nextCell.y);
+    if (dist(monster.x, monster.y, targetX, targetY) > 7) break;
+    monsterPathIndex++;
+  }
+
+  if (monsterPathIndex >= monsterPath.length) {
+    monster.vel.x = 0;
+    monster.vel.y = 0;
+    return;
+  }
+
+  const nextCell = monsterPath[monsterPathIndex];
+  const deltaX = tileCenterX(nextCell.x) - monster.x;
+  const deltaY = tileCenterY(nextCell.y) - monster.y;
+  const distance = Math.hypot(deltaX, deltaY);
+  monster.vel.x = distance === 0 ? 0 : deltaX / distance * MONSTER_SPEED;
+  monster.vel.y = distance === 0 ? 0 : deltaY / distance * MONSTER_SPEED;
+  monster.collides(walls);
+}
+
+function findDungeonPath(start, goal) {
+  const blockedCells = new Set(wallSprites.map((cell) => `${cell.x},${cell.y}`));
+  const startKey = `${start.x},${start.y}`;
+  const goalKey = `${goal.x},${goal.y}`;
+  const previous = new Map([[startKey, null]]);
+  const queue = [start];
+
+  for (let index = 0; index < queue.length; index++) {
+    const cell = queue[index];
+    const cellKey = `${cell.x},${cell.y}`;
+    if (cellKey === goalKey) break;
+
+    for (const [stepX, stepY] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+      const nextCell = { x: cell.x + stepX, y: cell.y + stepY };
+      const nextKey = `${nextCell.x},${nextCell.y}`;
+      if (
+        nextCell.x < 0 || nextCell.x >= GRID_COLUMNS ||
+        nextCell.y < 0 || nextCell.y >= GRID_ROWS ||
+        blockedCells.has(nextKey) || previous.has(nextKey)
+      ) continue;
+      previous.set(nextKey, cellKey);
+      queue.push(nextCell);
+    }
+  }
+
+  if (!previous.has(goalKey)) return [];
+
+  const path = [];
+  let currentKey = goalKey;
+  while (currentKey !== null) {
+    const [x, y] = currentKey.split(",").map(Number);
+    path.push({ x, y });
+    currentKey = previous.get(currentKey);
+  }
+  return path.reverse();
+}
+
+function worldToCell(x, y) {
+  return {
+    x: constrain(Math.round((x - GRID_LEFT - TILE_SIZE / 2) / TILE_SIZE), 0, GRID_COLUMNS - 1),
+    y: constrain(Math.round((y - GRID_TOP - TILE_SIZE / 2) / TILE_SIZE), 0, GRID_ROWS - 1)
+  };
 }
 
 function drawDungeonFloor() {
@@ -227,6 +346,18 @@ function drawCarriedCoal() {
   rect(player.x, player.y - 22, 4, 6);
 }
 
+function drawMonsterFace() {
+  noStroke();
+  fill("#fff0cf");
+  rect(monster.x - 8, monster.y - 5, 5, 6);
+  rect(monster.x + 3, monster.y - 5, 5, 6);
+  fill("#261a1b");
+  rect(monster.x - 6, monster.y - 3, 2, 3);
+  rect(monster.x + 5, monster.y - 3, 2, 3);
+  fill("#5e282d");
+  rect(monster.x - 5, monster.y + 6, 10, 4);
+}
+
 function drawHud() {
   noStroke();
   fill("#111715");
@@ -247,7 +378,7 @@ function drawHud() {
   text(`COAL ${carryingCoal ? "CARRIED" : "EMPTY-HANDED"}`, 390, 57);
   textAlign(RIGHT, CENTER);
   text("WASD MOVE   E INTERACT   Q BURN COAL", CANVAS_WIDTH - 24, 26);
-  text("Find the exit after all machines are active", CANVAS_WIDTH - 24, 57);
+  text("The dungeon keeper is hunting you", CANVAS_WIDTH - 24, 57);
   textAlign(LEFT, CENTER);
 }
 
@@ -276,6 +407,7 @@ function drawTitleOrEndScreen() {
     textSize(18);
     text("The dungeon is going cold.", CANVAS_WIDTH / 2, 278);
     text("Carry coal to the three machines, then reach the east exit.", CANVAS_WIDTH / 2, 316);
+    text("Avoid the dungeon keeper. It will chase you.", CANVAS_WIDTH / 2, 344);
     fill("#a8b5a8");
     textSize(15);
     text("WASD move     E pick up / fuel a machine     Q burn coal for warmth", CANVAS_WIDTH / 2, 380);
@@ -290,6 +422,14 @@ function drawTitleOrEndScreen() {
     textSize(18);
     text("You escaped the frozen dungeon.", CANVAS_WIDTH / 2, 340);
     text("Press R to play again", CANVAS_WIDTH / 2, 408);
+  } else if (lossReason === "monster") {
+    fill("#df7359");
+    textSize(36);
+    text("THE KEEPER CAUGHT YOU", CANVAS_WIDTH / 2, 280);
+    fill("#eee5c9");
+    textSize(18);
+    text("Keep moving and use the dungeon passages to escape.", CANVAS_WIDTH / 2, 340);
+    text("Press R to try again", CANVAS_WIDTH / 2, 408);
   } else {
     fill("#df7359");
     textSize(38);
