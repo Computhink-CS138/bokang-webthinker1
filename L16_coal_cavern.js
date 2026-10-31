@@ -23,8 +23,8 @@ let statusMessageUntil = 0;
 let lastActionAt = 0;
 
 function setup() {
-  const gameCanvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
-  gameCanvas.parent("game");
+  new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+  document.getElementById("game").appendChild(document.querySelector("canvas"));
   pixelDensity(1);
   noSmooth();
   textFont("monospace");
