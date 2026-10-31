@@ -1,14 +1,16 @@
 const TILE_SIZE = 48;
-const GRID_COLUMNS = 18;
-const GRID_ROWS = 12;
+let GRID_COLUMNS = 18;
+let GRID_ROWS = 12;
 const GRID_LEFT = 48;
 const GRID_TOP = 112;
-const CANVAS_WIDTH = 960;
-const CANVAS_HEIGHT = 720;
+let CANVAS_WIDTH = 960;
+let CANVAS_HEIGHT = 720;
 const INTERACTION_RANGE = 42;
 const PLAYER_SPEED = 3;
-const MONSTER_SPEED = 1.7;
+const BASE_MONSTER_SPEED = 1.7;
+const MONSTER_SPEED_STEP = 0.22;
 const MONSTER_REPATH_INTERVAL = 300;
+const MAX_STAGES = 5;
 const WARMTH_LOSS_PER_SECOND = 0.34;
 
 let player;
@@ -29,6 +31,8 @@ let monsterPathIndex = 0;
 let monsterGoalKey = "";
 let lastMonsterPathAt = 0;
 let lossReason = "cold";
+let stage = 1;
+let monsterSpeed = BASE_MONSTER_SPEED;
 
 function setup() {
   new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -38,18 +42,6 @@ function setup() {
   textFont("monospace");
   textAlign(LEFT, CENTER);
   world.gravity.y = 0;
-
-  createDungeonWalls();
-  walls = new Group();
-  walls.collider = "static";
-  walls.w = TILE_SIZE;
-  walls.h = TILE_SIZE;
-  walls.color = "#3b4540";
-  walls.stroke = "#758071";
-
-  for (const cell of wallSprites) {
-    new walls.Sprite(tileCenterX(cell.x), tileCenterY(cell.y));
-  }
 
   player = new Sprite(tileCenterX(2), tileCenterY(2), 24, 28);
   player.color = "#e9b65e";
@@ -76,46 +68,82 @@ function createDungeonWalls() {
     wallSprites.push({ x: 0, y }, { x: GRID_COLUMNS - 1, y });
   }
 
-  for (let y = 1; y < GRID_ROWS - 1; y++) {
-    if (y !== 3 && y !== 8) wallSprites.push({ x: 6, y });
-    if (y !== 5 && y !== 9) wallSprites.push({ x: 11, y });
+  let partitionIndex = 0;
+  for (let x = 6; x < GRID_COLUMNS - 4; x += 5, partitionIndex++) {
+    const firstOpening = 3 + (partitionIndex * 2) % (GRID_ROWS - 7);
+    const secondOpening = GRID_ROWS - 3;
+    for (let y = 1; y < GRID_ROWS - 1; y++) {
+      if (y !== firstOpening && y !== secondOpening) wallSprites.push({ x, y });
+    }
   }
   for (let x = 1; x <= 5; x++) {
     if (x !== 3) wallSprites.push({ x, y: 6 });
   }
-  for (let x = 12; x <= 16; x++) {
+  for (let x = 12; x <= Math.min(16, GRID_COLUMNS - 2); x++) {
     if (x !== 14) wallSprites.push({ x, y: 6 });
   }
 }
 
 function resetRun() {
+  stage = 1;
+  configureStage(stage);
+  gameMode = "title";
+}
+
+function configureStage(nextStage) {
+  if (walls) {
+    walls.forEach((wall) => {
+      wall.visible = false;
+      wall.collider = "none";
+    });
+  }
+
+  stage = nextStage;
+  GRID_COLUMNS = 18 + (stage - 1) * 2;
+  GRID_ROWS = 12 + (stage - 1) * 2;
+  CANVAS_WIDTH = GRID_LEFT * 2 + GRID_COLUMNS * TILE_SIZE;
+  CANVAS_HEIGHT = GRID_TOP + GRID_ROWS * TILE_SIZE + 32;
+  resizeCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+  monsterSpeed = BASE_MONSTER_SPEED + (stage - 1) * MONSTER_SPEED_STEP;
+
+  walls = new Group();
+  walls.collider = "static";
+  walls.w = TILE_SIZE;
+  walls.h = TILE_SIZE;
+  walls.color = "#3b4540";
+  walls.stroke = "#758071";
+  createDungeonWalls();
+  for (const cell of wallSprites) {
+    new walls.Sprite(tileCenterX(cell.x), tileCenterY(cell.y));
+  }
+
   coalPiles = [
     { x: 3, y: 3, available: true },
-    { x: 4, y: 9, available: true },
+    { x: 4, y: GRID_ROWS - 3, available: true },
     { x: 8, y: 2, available: true },
     { x: 10, y: 8, available: true },
-    { x: 14, y: 4, available: true },
-    { x: 8, y: 9, available: true },
-    { x: 15, y: 8, available: true }
+    { x: GRID_COLUMNS - 4, y: 4, available: true },
+    { x: 8, y: GRID_ROWS - 3, available: true },
+    { x: GRID_COLUMNS - 3, y: GRID_ROWS - 4, available: true }
   ];
   machines = [
     { x: 4, y: 8, active: false, name: "WEST FURNACE" },
     { x: 9, y: 3, active: false, name: "CENTRAL PUMP" },
-    { x: 14, y: 8, active: false, name: "EAST LIFT" }
+    { x: GRID_COLUMNS - 4, y: GRID_ROWS - 4, active: false, name: "EAST LIFT" }
   ];
-  exitPoint = { x: 16, y: 2 };
+  exitPoint = { x: GRID_COLUMNS - 2, y: 2 };
   warmth = 100;
   carryingCoal = false;
   lossReason = "cold";
-  gameMode = "title";
   statusMessage = "";
   statusMessageUntil = 0;
+  lastActionAt = 0;
   player.x = tileCenterX(2);
   player.y = tileCenterY(2);
   player.vel.x = 0;
   player.vel.y = 0;
-  monster.x = tileCenterX(15);
-  monster.y = tileCenterY(9);
+  monster.x = tileCenterX(GRID_COLUMNS - 3);
+  monster.y = tileCenterY(GRID_ROWS - 3);
   monster.vel.x = 0;
   monster.vel.y = 0;
   monsterPath = [];
@@ -123,6 +151,13 @@ function resetRun() {
   monsterGoalKey = "";
   lastMonsterPathAt = 0;
   setDungeonVisible(false);
+}
+
+function startNextStage() {
+  configureStage(stage + 1);
+  gameMode = "playing";
+  setDungeonVisible(true);
+  showMessage(`Stage ${stage}: the keeper is faster.`);
 }
 
 function setDungeonVisible(visible) {
@@ -186,7 +221,7 @@ function updateGame() {
   }
 
   if (machines.every((machine) => machine.active) && distanceTo(exitPoint) < INTERACTION_RANGE) {
-    gameMode = "won";
+    gameMode = stage === MAX_STAGES ? "won" : "stageComplete";
     setDungeonVisible(false);
   }
 }
@@ -226,8 +261,8 @@ function updateMonster() {
   const deltaX = tileCenterX(nextCell.x) - monster.x;
   const deltaY = tileCenterY(nextCell.y) - monster.y;
   const distance = Math.hypot(deltaX, deltaY);
-  monster.vel.x = distance === 0 ? 0 : deltaX / distance * MONSTER_SPEED;
-  monster.vel.y = distance === 0 ? 0 : deltaY / distance * MONSTER_SPEED;
+  monster.vel.x = distance === 0 ? 0 : deltaX / distance * monsterSpeed;
+  monster.vel.y = distance === 0 ? 0 : deltaY / distance * monsterSpeed;
   monster.collides(walls);
 }
 
@@ -374,11 +409,11 @@ function drawHud() {
   text(`${Math.ceil(warmth)}%`, 294, 49);
 
   const activeCount = machines.filter((machine) => machine.active).length;
-  text(`MACHINES ${activeCount}/${machines.length}`, 390, 26);
+  text(`STAGE ${stage}/${MAX_STAGES}  MACHINES ${activeCount}/${machines.length}`, 390, 26);
   text(`COAL ${carryingCoal ? "CARRIED" : "EMPTY-HANDED"}`, 390, 57);
   textAlign(RIGHT, CENTER);
   text("WASD MOVE   E INTERACT   Q BURN COAL", CANVAS_WIDTH - 24, 26);
-  text("The dungeon keeper is hunting you", CANVAS_WIDTH - 24, 57);
+  text(`KEEPER SPEED ${monsterSpeed.toFixed(1)}`, CANVAS_WIDTH - 24, 57);
   textAlign(LEFT, CENTER);
 }
 
@@ -405,22 +440,32 @@ function drawTitleOrEndScreen() {
     text("EMBERKEEP", CANVAS_WIDTH / 2, 220);
     fill("#eee5c9");
     textSize(18);
-    text("The dungeon is going cold.", CANVAS_WIDTH / 2, 278);
-    text("Carry coal to the three machines, then reach the east exit.", CANVAS_WIDTH / 2, 316);
-    text("Avoid the dungeon keeper. It will chase you.", CANVAS_WIDTH / 2, 344);
+    text("Clear five dungeons to escape the cold.", CANVAS_WIDTH / 2, 278);
+    text("Each stage is larger, and the keeper gets faster.", CANVAS_WIDTH / 2, 316);
+    text("Carry coal to the three machines, then reach the east exit.", CANVAS_WIDTH / 2, 350);
+    text("Avoid the keeper. It will chase you.", CANVAS_WIDTH / 2, 378);
     fill("#a8b5a8");
     textSize(15);
-    text("WASD move     E pick up / fuel a machine     Q burn coal for warmth", CANVAS_WIDTH / 2, 380);
+    text("WASD move     E pick up / fuel a machine     Q burn coal for warmth", CANVAS_WIDTH / 2, 414);
     fill("#f0bf68");
     textSize(20);
-    text("PRESS ENTER TO DESCEND", CANVAS_WIDTH / 2, 462);
+    text("PRESS ENTER TO DESCEND", CANVAS_WIDTH / 2, 478);
+  } else if (gameMode === "stageComplete") {
+    fill("#9bd583");
+    textSize(36);
+    text(`STAGE ${stage} CLEARED`, CANVAS_WIDTH / 2, 280);
+    fill("#eee5c9");
+    textSize(18);
+    text(`Stage ${stage + 1} has a larger map and a faster keeper.`, CANVAS_WIDTH / 2, 340);
+    fill("#f0bf68");
+    text("PRESS ENTER TO CONTINUE", CANVAS_WIDTH / 2, 408);
   } else if (gameMode === "won") {
     fill("#9bd583");
     textSize(36);
     text("THE LIFT IS RUNNING", CANVAS_WIDTH / 2, 280);
     fill("#eee5c9");
     textSize(18);
-    text("You escaped the frozen dungeon.", CANVAS_WIDTH / 2, 340);
+    text("You escaped all five frozen dungeons.", CANVAS_WIDTH / 2, 340);
     text("Press R to play again", CANVAS_WIDTH / 2, 408);
   } else if (lossReason === "monster") {
     fill("#df7359");
@@ -446,6 +491,11 @@ function drawTitleOrEndScreen() {
 function keyPressed() {
   if (gameMode === "title" && (keyCode === ENTER || keyCode === RETURN || key === " ")) {
     startRun();
+    return false;
+  }
+
+  if (gameMode === "stageComplete" && (keyCode === ENTER || keyCode === RETURN || key === " ")) {
+    startNextStage();
     return false;
   }
 
