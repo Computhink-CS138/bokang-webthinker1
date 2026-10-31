@@ -26,10 +26,9 @@ let carryingCoal = false;
 let statusMessage = "";
 let statusMessageUntil = 0;
 let lastActionAt = 0;
-let monsterPath = [];
-let monsterPathIndex = 0;
-let monsterGoalKey = "";
-let lastMonsterPathAt = 0;
+let extraMonsters = [];
+let monsterPathStates = new Map();
+let nextMonsterSpawnAt = Infinity;
 let lossReason = "cold";
 let stage = 1;
 let monsterSpeed = BASE_MONSTER_SPEED;
@@ -97,11 +96,20 @@ function configureStage(nextStage) {
       wall.collider = "none";
     });
   }
+  for (const oldMonster of extraMonsters) {
+    oldMonster.visible = false;
+    oldMonster.collider = "none";
+  }
+  extraMonsters = [];
+  monsterPathStates = new Map();
 
   stage = nextStage;
   GRID_COLUMNS = 18 + (stage - 1) * 2;
   GRID_ROWS = 12 + (stage - 1) * 2;
   monsterSpeed = BASE_MONSTER_SPEED + (stage - 1) * MONSTER_SPEED_STEP;
+  nextMonsterSpawnAt = stage >= 4
+    ? millis() + (stage === 4 ? 18000 : 14000)
+    : Infinity;
 
   walls = new Group();
   walls.collider = "static";
@@ -143,10 +151,6 @@ function configureStage(nextStage) {
   monster.y = tileCenterY(GRID_ROWS - 3);
   monster.vel.x = 0;
   monster.vel.y = 0;
-  monsterPath = [];
-  monsterPathIndex = 0;
-  monsterGoalKey = "";
-  lastMonsterPathAt = 0;
   setDungeonVisible(false);
 }
 
@@ -154,12 +158,17 @@ function startNextStage() {
   configureStage(stage + 1);
   gameMode = "playing";
   setDungeonVisible(true);
-  showMessage(`Stage ${stage}: the keeper is faster.`);
+  showMessage(stage >= 4
+    ? `Stage ${stage}: the keeper is faster and can multiply.`
+    : `Stage ${stage}: the keeper is faster.`);
 }
 
 function setDungeonVisible(visible) {
   player.visible = visible;
   monster.visible = visible;
+  for (const extraMonster of extraMonsters) {
+    extraMonster.visible = visible;
+  }
   walls.forEach((wall) => {
     wall.visible = visible;
   });
@@ -177,7 +186,9 @@ function draw() {
     drawMachines();
     drawExit();
     drawCarriedCoal();
-    drawMonsterFace();
+    for (const chaser of getMonsters()) {
+      drawMonsterFace(chaser);
+    }
     camera.off();
     drawHud();
     drawStatusMessage();
@@ -227,9 +238,10 @@ function updateGame() {
   player.collides(walls);
   updateMonster();
 
-  const touchingMonster =
-    Math.abs(player.x - monster.x) <= (player.w + monster.w) / 2 &&
-    Math.abs(player.y - monster.y) <= (player.h + monster.h) / 2;
+  const touchingMonster = getMonsters().some((chaser) =>
+    Math.abs(player.x - chaser.x) <= (player.w + chaser.w) / 2 &&
+    Math.abs(player.y - chaser.y) <= (player.h + chaser.h) / 2
+  );
   if (touchingMonster) {
     lossReason = "monster";
     gameMode = "lost";
@@ -251,43 +263,95 @@ function updateGame() {
 }
 
 function updateMonster() {
+  for (const chaser of getMonsters()) {
+    updateMonsterChaser(chaser);
+  }
+
+  const maximumKeepers = stage === 4 ? 3 : 5;
+  const currentTime = millis();
+  if (
+    stage >= 4 &&
+    getMonsters().length < maximumKeepers &&
+    currentTime >= nextMonsterSpawnAt
+  ) {
+    spawnMonsterClone();
+    nextMonsterSpawnAt = currentTime + (stage === 4 ? 18000 : 14000);
+    showMessage("The keeper split. More are hunting you!");
+  }
+}
+
+function updateMonsterChaser(chaser) {
+  let pathState = monsterPathStates.get(chaser);
+  if (!pathState) {
+    pathState = { path: [], pathIndex: 0, goalKey: "", lastPathAt: 0 };
+    monsterPathStates.set(chaser, pathState);
+  }
+
   const playerCell = worldToCell(player.x, player.y);
   const goalKey = `${playerCell.x},${playerCell.y}`;
   const currentTime = millis();
 
   if (
-    currentTime - lastMonsterPathAt >= MONSTER_REPATH_INTERVAL ||
-    goalKey !== monsterGoalKey ||
-    monsterPath.length === 0
+    currentTime - pathState.lastPathAt >= MONSTER_REPATH_INTERVAL ||
+    goalKey !== pathState.goalKey ||
+    pathState.path.length === 0
   ) {
-    const monsterCell = worldToCell(monster.x, monster.y);
-    monsterPath = findDungeonPath(monsterCell, playerCell);
-    monsterPathIndex = monsterPath.length > 1 ? 1 : 0;
-    monsterGoalKey = goalKey;
-    lastMonsterPathAt = currentTime;
+    const monsterCell = worldToCell(chaser.x, chaser.y);
+    pathState.path = findDungeonPath(monsterCell, playerCell);
+    pathState.pathIndex = pathState.path.length > 1 ? 1 : 0;
+    pathState.goalKey = goalKey;
+    pathState.lastPathAt = currentTime;
   }
 
-  while (monsterPathIndex < monsterPath.length) {
-    const nextCell = monsterPath[monsterPathIndex];
+  while (pathState.pathIndex < pathState.path.length) {
+    const nextCell = pathState.path[pathState.pathIndex];
     const targetX = tileCenterX(nextCell.x);
     const targetY = tileCenterY(nextCell.y);
-    if (dist(monster.x, monster.y, targetX, targetY) > 7) break;
-    monsterPathIndex++;
+    if (dist(chaser.x, chaser.y, targetX, targetY) > 7) break;
+    pathState.pathIndex++;
   }
 
-  if (monsterPathIndex >= monsterPath.length) {
-    monster.vel.x = 0;
-    monster.vel.y = 0;
+  if (pathState.pathIndex >= pathState.path.length) {
+    chaser.vel.x = 0;
+    chaser.vel.y = 0;
     return;
   }
 
-  const nextCell = monsterPath[monsterPathIndex];
-  const deltaX = tileCenterX(nextCell.x) - monster.x;
-  const deltaY = tileCenterY(nextCell.y) - monster.y;
+  const nextCell = pathState.path[pathState.pathIndex];
+  const deltaX = tileCenterX(nextCell.x) - chaser.x;
+  const deltaY = tileCenterY(nextCell.y) - chaser.y;
   const distance = Math.hypot(deltaX, deltaY);
-  monster.vel.x = distance === 0 ? 0 : deltaX / distance * monsterSpeed;
-  monster.vel.y = distance === 0 ? 0 : deltaY / distance * monsterSpeed;
-  monster.collides(walls);
+  chaser.vel.x = distance === 0 ? 0 : deltaX / distance * monsterSpeed;
+  chaser.vel.y = distance === 0 ? 0 : deltaY / distance * monsterSpeed;
+  chaser.collides(walls);
+}
+
+function spawnMonsterClone() {
+  const chasers = getMonsters();
+  const parent = chasers[chasers.length - 1];
+  const parentCell = worldToCell(parent.x, parent.y);
+  const blockedCells = new Set(wallSprites.map((cell) => `${cell.x},${cell.y}`));
+  const spawnCell = [[1, 0], [0, 1], [-1, 0], [0, -1]]
+    .map(([stepX, stepY]) => ({ x: parentCell.x + stepX, y: parentCell.y + stepY }))
+    .find((cell) =>
+      cell.x > 0 && cell.x < GRID_COLUMNS - 1 &&
+      cell.y > 0 && cell.y < GRID_ROWS - 1 &&
+      !blockedCells.has(`${cell.x},${cell.y}`) &&
+      chasers.every((chaser) => dist(chaser.x, chaser.y, tileCenterX(cell.x), tileCenterY(cell.y)) >= TILE_SIZE)
+    ) || parentCell;
+
+  const clone = new Sprite(tileCenterX(spawnCell.x), tileCenterY(spawnCell.y), 30, 30);
+  clone.color = "#a2484d";
+  clone.stroke = "#ed9b73";
+  clone.rotationLock = true;
+  clone.friction = 0;
+  clone.bounciness = 0;
+  clone.visible = true;
+  extraMonsters.push(clone);
+}
+
+function getMonsters() {
+  return [monster, ...extraMonsters];
 }
 
 function findDungeonPath(start, goal) {
